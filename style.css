@@ -51,6 +51,21 @@ header {
   text-transform: uppercase;
   color: var(--accent);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-title::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url('img/icons/antiquarians.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
 }
 
 nav a {
