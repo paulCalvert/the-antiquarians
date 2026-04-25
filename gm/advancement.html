@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advancement — The Antiquarians</title>
+  <link rel="stylesheet" href="../style.css">
+  <link id="player-css" rel="stylesheet" href="../player.css">
+  <script>if(localStorage.getItem('gm_mode')==='active'){document.getElementById('player-css').disabled=true;}</script>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="site-title">The Antiquarians</a>
+      <nav>
+        <a href="../party.html">Party</a>
+        <a href="../sessions.html">Sessions</a>
+        <a href="../story.html">Story</a>
+        <a href="../npcs.html">NPCs</a>
+        <a href="../world.html">World</a>
+        <a href="../tracker.html">My Sheet</a>
+        <a href="../gm/index.html" class="gm-only">GM</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><a href="index.html">GM Reference</a><span>›</span>Advancement</div>
+        <h1>Advancement</h1>
+        <p class="subtitle">XP triggers, playbook and attribute advances, crew upgrades, and what tier actually means.</p>
+      </div>
+
+      <div class="section">
+        <h2>Character XP</h2>
+        <div class="arc-block">
+          <div class="block-label">When Characters Earn XP</div>
+          <p>At the end of each session, go through these questions with the group. Each "yes" earns 1 XP on the character's playbook track:</p>
+          <ul>
+            <li>Did you address the challenges of the score with <strong>desperate rolls</strong>? (Marks XP when you risk position.)</li>
+            <li>Did you express your <strong>character's beliefs, drives, heritage, or background</strong> — the things that make them who they are?</li>
+            <li>Did you struggle with <strong>issues from your vice or background</strong> — did those complications come up in play?</li>
+          </ul>
+          <p>Additionally, each playbook has 1–2 specific XP triggers — things unique to that character type. If those fired during the session, they earn 1 XP each. Check the character's sheet for their specific triggers.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Attribute XP</div>
+          <p>Characters earn 1 XP on an attribute track each time they make a <strong>desperate roll using any action in that attribute</strong>. This is marked during play — not at the end of session. Desperate rolls are high-risk; the attribute XP is immediate acknowledgment of that risk.</p>
+          <ul>
+            <li><strong>Insight</strong> (Hunt, Study, Survey, Tinker) — mark when any of these four actions are rolled at desperate position.</li>
+            <li><strong>Prowess</strong> (Finesse, Prowl, Skirmish, Wreck) — same.</li>
+            <li><strong>Resolve</strong> (Attune, Command, Consort, Sway) — same.</li>
+          </ul>
+          <p>Each attribute track holds 6 XP. When it fills, the character advances (see below) and the track resets.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Spending XP — Playbook Advances</h2>
+        <div class="arc-block">
+          <div class="block-label">The Playbook Track</div>
+          <p>The playbook XP track holds 8 XP. When it fills, the character chooses a <strong>playbook advance</strong> and the track resets. Playbook advances are chosen from:</p>
+          <ul>
+            <li>Take a new special ability from your playbook.</li>
+            <li>Take a special ability from another playbook (costs 2 advances — must be chosen twice, or discussed with GM).</li>
+            <li>Add a new <strong>contact</strong> to your list.</li>
+            <li>Add a new <strong>friend or rival</strong> to your personal narrative.</li>
+          </ul>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Attribute Advances</div>
+          <p>When an attribute track fills (6 XP), the character takes an <strong>attribute advance</strong>:</p>
+          <ul>
+            <li>Add 1 dot to any action rating in that attribute (max 4 dots in any action).</li>
+          </ul>
+          <p>This is the primary way action ratings increase. A character who consistently plays to their playbook's strengths and takes desperate rolls in one attribute will see that attribute's actions grow fastest.</p>
+        </div>
+        <div class="info-block">
+          <p>The XP system rewards engagement, not safety. Characters advance by taking risks (desperate rolls), playing their character (playbook triggers), and being used (attribute XP through play). A character who never takes desperate rolls will advance their playbook slowly and their attributes barely at all. Encourage players to push.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Crew XP and Crew Advances</h2>
+        <div class="arc-block">
+          <div class="block-label">When the Crew Earns XP</div>
+          <p>At the end of each session, the crew earns XP based on these questions. Each "yes" earns 1 crew XP:</p>
+          <ul>
+            <li>Did the crew pursue the <strong>crew's type-specific goal</strong>? (For Thieves: did they acquire something valuable or rare that furthered their expertise and reputation?)</li>
+            <li>Did the crew contend with <strong>challenges from their nature</strong> — the complications that come with being this kind of crew?</li>
+            <li>Did one or more characters express their <strong>vice</strong> in a way that created a problem?</li>
+          </ul>
+          <p>The crew XP track holds 10 segments. When it fills, the crew takes a crew advance and the track resets.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Crew Advances</div>
+          <p>Each crew advance is spent on an upgrade from the crew's upgrade list. These represent permanent improvements to the crew's capabilities:</p>
+          <ul>
+            <li><strong>Cohort upgrade</strong> — Improve an existing gang or expert (add a type, remove a flaw).</li>
+            <li><strong>New cohort</strong> — Add a new gang or expert to the roster.</li>
+            <li><strong>Lair upgrade</strong> — Improve the crew's home base (hidden, secure, connected, etc.).</li>
+            <li><strong>Training upgrade</strong> — Permanently grant +1 XP per session to a specific attribute track for all characters.</li>
+            <li><strong>Ability upgrade</strong> — Unlock a new crew special ability.</li>
+          </ul>
+          <p>The full upgrade list is on the crew sheet. Players choose which to buy; you decide what each one looks like in the fiction.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Crew Tier</h2>
+        <div class="arc-block">
+          <div class="block-label">What Tier Means</div>
+          <p>Tier represents the crew's overall power and position in the criminal underworld. It affects how their actions land, what they can access, and how others treat them.</p>
+          <ul>
+            <li><strong>Tier 0</strong> — Scrappy amateurs. Limited resources, no real turf. Most starting crews.</li>
+            <li><strong>Tier 1</strong> — Emerging outfit. Known in their district. Can run scores against Tier 1–2 targets comfortably.</li>
+            <li><strong>Tier 2</strong> — Established crew. City-wide reputation. Access to better equipment, contacts, and planning resources.</li>
+            <li><strong>Tier 3</strong> — Major operation. Faction-level presence. Other crews have to account for them.</li>
+            <li><strong>Tier 4</strong> — Power players. Near the top of the underworld. Operating at this level means you've made enemies everywhere.</li>
+          </ul>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Advancing Tier</div>
+          <p>The crew advances tier when their <strong>Rep track fills</strong> (12 segments). Rep is earned per score (equal to the target's tier). When tier advances, the Rep track resets and the crew immediately feels the difference in how NPCs respond to them. Tier advancement is also a moment to reflect on what's changed — the crew's ambitions, their rivals, the risks they now face from factions that were previously indifferent.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Tier in the Fiction</div>
+          <p>Tier matters most as a narrative tool. A Tier 0 crew trying to take on a Tier 3 faction is desperate — they can do it with clever play, but the effect scale is limited and consequences will be severe. A Tier 2 crew taking a score against a Tier 1 target is straightforward — the challenge isn't the opposition, it's keeping things interesting. Use tier to set expectations, not as a wall. Players can punch up; they just need to know what they're up against.</p>
+        </div>
+        <div class="info-block">
+          <p>At the start of the campaign, The Antiquarians are Tier 0 — scrappy, skilled, but not yet established. Every score that builds their Rep is a step toward a larger footprint and larger problems. The transition from Tier 0 to Tier 1 is usually the moment the crew stops being invisible and starts being someone other factions have to think about.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Retired Characters</h2>
+        <div class="arc-block">
+          <div class="block-label">When a Character Retires</div>
+          <p>A character retires when they accumulate <strong>4 trauma conditions</strong>. They leave active play — dead, broken beyond function, or transformed into something that can no longer operate as a criminal in Doskvol. Retirement is not a punishment — it's the end of a character arc. The player creates a new character and joins the fiction at an appropriate point. The retired character becomes an NPC, a legend, a ghost, or a tragedy depending on how they went out.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Voluntary Retirement</div>
+          <p>A player can also retire their character voluntarily — when the character's story feels complete, when they've achieved what they set out to do, or when the player wants to play something different. This should be a conversation, not a quiet decision. A voluntary retirement is a moment worth marking at the table. Where do they go? What do they take with them? What do they leave behind for the crew?</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="../gm.js"></script>
+</body>
+</html>

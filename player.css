@@ -1,0 +1,12 @@
+/* ── Player View — hides GM-only content ── */
+/* Applied on the public Netlify site. GM mode unlocks via the GM button in the nav. */
+
+/* Hide any element explicitly tagged as GM-only */
+.gm-only {
+  display: none;
+}
+
+/* Secret-block styling is used exclusively for GM notes — hide all of them */
+.secret-block {
+  display: none;
+}

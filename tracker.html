@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Sheet — The Antiquarians</title>
+  <link rel="stylesheet" href="style.css">
+  <link id="player-css" rel="stylesheet" href="player.css">
+  <script>if(localStorage.getItem('gm_mode')==='active'){document.getElementById('player-css').disabled=true;}</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+
+    /* ── Sheet select & inputs ──────────────────────────── */
+    .sheet-select,
+    .sheet-input,
+    .sheet-textarea {
+      background: var(--bg-deep, #0e0e0e);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: inherit;
+      border-radius: 3px;
+    }
+    .sheet-select {
+      padding: 0.45rem 0.7rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+      max-width: 280px;
+      width: 100%;
+      display: block;
+    }
+    .sheet-select:focus,
+    .sheet-input:focus,
+    .sheet-textarea:focus {
+      outline: none;
+      border-color: var(--accent, #b8922a);
+    }
+    .sheet-textarea {
+      width: 100%;
+      padding: 0.7rem;
+      font-size: 0.9rem;
+      resize: vertical;
+      box-sizing: border-box;
+      line-height: 1.6;
+    }
+    .sheet-textarea::placeholder {
+      color: var(--text-muted);
+      opacity: 0.45;
+    }
+
+    /* ── Radio buttons ──────────────────────────────────── */
+    .radio-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: flex-end;
+      margin-top: 0.25rem;
+    }
+    .radio-item {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+      cursor: pointer;
+    }
+    .radio-item input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+    }
+    .radio-circle {
+      width: 1.65rem;
+      height: 1.65rem;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      cursor: pointer;
+      transition: background 0.12s, border-color 0.12s;
+      box-sizing: border-box;
+    }
+    .radio-item input[type="radio"]:checked + .radio-circle {
+      background: var(--accent, #b8922a);
+      border-color: var(--accent, #b8922a);
+    }
+    .radio-item:hover .radio-circle {
+      border-color: var(--accent, #b8922a);
+    }
+    .radio-num {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      line-height: 1;
+    }
+
+    /* Smaller circles for actions table */
+    .radio-item.sm .radio-circle {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+    .radio-item.sm .radio-num {
+      font-size: 0.6rem;
+    }
+
+    /* ── Harm table ─────────────────────────────────────── */
+    .harm-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    .harm-table th {
+      text-align: left;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 0 0.5rem 0.5rem 0;
+    }
+    .harm-table td {
+      padding: 0.25rem 0.5rem 0.25rem 0;
+      vertical-align: middle;
+    }
+    .harm-table td:first-child {
+      white-space: nowrap;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding-right: 0.75rem;
+      width: 1px;
+    }
+    .harm-input {
+      background: var(--bg-deep, #0e0e0e);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.85rem;
+      padding: 0.35rem 0.55rem;
+      border-radius: 3px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .harm-input:focus {
+      outline: none;
+      border-color: var(--accent, #b8922a);
+    }
+    .harm-input::placeholder {
+      color: var(--text-muted);
+      opacity: 0.35;
+    }
+    .harm-table .empty-cell {
+      color: var(--text-muted);
+      opacity: 0.25;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    /* ── Actions table ──────────────────────────────────── */
+    .actions-group {
+      margin-bottom: 1.25rem;
+    }
+    .actions-group:last-child {
+      margin-bottom: 0;
+    }
+    .actions-attr-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .action-row:last-child {
+      border-bottom: none;
+    }
+    .action-name {
+      font-size: 0.875rem;
+      color: var(--text);
+      min-width: 90px;
+    }
+    .action-radios {
+      display: flex;
+      gap: 0.35rem;
+      align-items: flex-end;
+    }
+
+    /* ── XP dropdowns ───────────────────────────────────── */
+    .xp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    @media (max-width: 480px) {
+      .xp-grid { grid-template-columns: 1fr; }
+    }
+    .xp-field label {
+      display: block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+    .xp-select {
+      background: var(--bg-deep, #0e0e0e);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.875rem;
+      padding: 0.4rem 0.6rem;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .xp-select:focus {
+      outline: none;
+      border-color: var(--accent, #b8922a);
+    }
+
+    /* ── Save flash ─────────────────────────────────────── */
+    .save-flash {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-left: 0.6rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .save-flash.visible { opacity: 1; }
+
+    /* ── Clear button ───────────────────────────────────── */
+    .clear-btn {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.7rem;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: inherit;
+      margin-top: 1rem;
+      display: block;
+    }
+    .clear-btn:hover {
+      color: var(--text);
+      border-color: var(--text-muted);
+    }
+
+    /* ── Hidden until char selected ─────────────────────── */
+    #sheet-body { display: none; }
+    #no-char-msg {
+      padding: 1.5rem 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* stress warning */
+    .stress-warning {
+      font-size: 0.72rem;
+      color: #b03030;
+      margin-left: 0.5rem;
+      display: none;
+    }
+    .stress-warning.visible { display: inline; }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="site-title">The Antiquarians</a>
+      <nav>
+        <a href="party.html">Party</a>
+        <a href="sessions.html">Sessions</a>
+        <a href="story.html">Story</a>
+        <a href="npcs.html">NPCs</a>
+        <a href="world.html">World</a>
+        <a href="tracker.html">My Sheet</a>
+        <a href="gm/index.html" class="gm-only">GM</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>My Sheet</div>
+        <h1>My Sheet</h1>
+        <p class="subtitle">Personal tracker — saved on this device only.</p>
+      </div>
+
+      <!-- ── 1. Name ─────────────────────────────────────── -->
+      <div class="section">
+        <h2>Name</h2>
+        <div class="arc-block">
+          <select class="sheet-select" id="char-select">
+            <option value="">— select your character —</option>
+            <option value="alaric">Alaric</option>
+            <option value="brick">Brick</option>
+            <option value="costya">Costya</option>
+            <option value="flint">Flint</option>
+            <option value="harrow">Harrow</option>
+            <option value="victor">Victor</option>
+          </select>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin:0.5rem 0 0;">Each character's data is stored separately on this device.</p>
+        </div>
+      </div>
+
+      <div id="no-char-msg">Select your character above to load your sheet.</div>
+
+      <div id="sheet-body">
+
+        <!-- ── 2. Stress ──────────────────────────────────── -->
+        <div class="section">
+          <h2>Stress <span class="stress-warning" id="stress-warning">— trauma territory</span></h2>
+          <div class="arc-block">
+            <div class="radio-row" id="stress-row"></div>
+          </div>
+        </div>
+
+        <!-- ── 3. Coin ────────────────────────────────────── -->
+        <div class="section">
+          <h2>Coin</h2>
+          <div class="arc-block">
+            <div class="radio-row" id="coin-row"></div>
+          </div>
+        </div>
+
+        <!-- ── 4. Harm ────────────────────────────────────── -->
+        <div class="section">
+          <h2>Harm</h2>
+          <div class="arc-block">
+            <table class="harm-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Slot 1</th>
+                  <th>Slot 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Level 1 — Lesser</td>
+                  <td><input class="harm-input" id="harm-1a" type="text" placeholder="lesser harm"></td>
+                  <td><input class="harm-input" id="harm-1b" type="text" placeholder="lesser harm"></td>
+                </tr>
+                <tr>
+                  <td>Level 2 — Moderate</td>
+                  <td><input class="harm-input" id="harm-2a" type="text" placeholder="moderate harm"></td>
+                  <td><input class="harm-input" id="harm-2b" type="text" placeholder="moderate harm"></td>
+                </tr>
+                <tr>
+                  <td>Level 3 — Severe</td>
+                  <td><input class="harm-input" id="harm-3" type="text" placeholder="severe harm"></td>
+                  <td class="empty-cell">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="arc-block" style="margin-top:0.75rem;">
+            <div class="block-label">Healing Clock</div>
+            <div class="radio-row" id="healing-row"></div>
+          </div>
+        </div>
+
+        <!-- ── 5. Actions ─────────────────────────────────── -->
+        <div class="section">
+          <h2>Actions</h2>
+          <div class="arc-block">
+            <div id="actions-container"></div>
+          </div>
+        </div>
+
+        <!-- ── 6. XP ──────────────────────────────────────── -->
+        <div class="section">
+          <h2>Experience</h2>
+          <div class="arc-block">
+            <div class="xp-grid">
+              <div class="xp-field">
+                <label for="xp-playbook">Playbook (0–8)</label>
+                <select class="xp-select" id="xp-playbook" data-field="xp_playbook"></select>
+              </div>
+              <div class="xp-field">
+                <label for="xp-insight">Insight (0–6)</label>
+                <select class="xp-select" id="xp-insight" data-field="xp_insight"></select>
+              </div>
+              <div class="xp-field">
+                <label for="xp-prowess">Prowess (0–6)</label>
+                <select class="xp-select" id="xp-prowess" data-field="xp_prowess"></select>
+              </div>
+              <div class="xp-field">
+                <label for="xp-resolve">Resolve (0–6)</label>
+                <select class="xp-select" id="xp-resolve" data-field="xp_resolve"></select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 7. Special Abilities ───────────────────────── -->
+        <div class="section">
+          <h2>Special Abilities</h2>
+          <div class="arc-block">
+            <textarea
+              class="sheet-textarea"
+              id="abilities-field"
+              rows="5"
+              placeholder="List your special abilities, their descriptions, and any notes on how you use them..."></textarea>
+          </div>
+        </div>
+
+        <!-- ── 8. Notes ───────────────────────────────────── -->
+        <div class="section">
+          <h2>Notes
+            <span class="save-flash" id="save-flash">saved</span>
+          </h2>
+          <div class="arc-block">
+            <textarea
+              class="sheet-textarea"
+              id="notes-field"
+              rows="8"
+              placeholder="Session notes, plans, contacts, things to follow up on..."></textarea>
+          </div>
+        </div>
+
+        <button class="clear-btn" id="clear-btn">Clear all data for this character</button>
+
+      </div><!-- /sheet-body -->
+    </div>
+  </main>
+
+  <script>
+    // ── Config ────────────────────────────────────────────────────────────────
+
+    const ACTIONS = [
+      { attr: 'Insight',  list: ['Hunt', 'Study', 'Survey', 'Tinker']           },
+      { attr: 'Prowess',  list: ['Finesse', 'Prowl', 'Skirmish', 'Wreck']       },
+      { attr: 'Resolve',  list: ['Attune', 'Command', 'Consort', 'Sway']        },
+    ];
+
+    const HARM_IDS = ['harm-1a', 'harm-1b', 'harm-2a', 'harm-2b', 'harm-3'];
+
+    // ── Storage helpers ───────────────────────────────────────────────────────
+
+    let char = '';
+
+    function key(field) {
+      return 'sheet_' + char + '_' + field;
+    }
+
+    function loadVal(field, fallback) {
+      const v = localStorage.getItem(key(field));
+      if (v === null) return fallback;
+      const n = Number(v);
+      return (typeof fallback === 'number' && !isNaN(n)) ? n : v;
+    }
+
+    function saveVal(field, value) {
+      localStorage.setItem(key(field), value);
+    }
+
+    // ── Radio group builder ───────────────────────────────────────────────────
+    // Creates a row of styled radio buttons.
+    // containerId: element to append into
+    // name:        radio group name (must be unique on page)
+    // min / max:   range of values
+    // small:       use smaller circles (for action rows)
+
+    function buildRadioRow(containerId, name, min, max, small) {
+      const row = document.getElementById(containerId);
+      row.innerHTML = '';
+      for (let i = min; i <= max; i++) {
+        const lbl = document.createElement('label');
+        lbl.className = 'radio-item' + (small ? ' sm' : '');
+
+        const inp = document.createElement('input');
+        inp.type  = 'radio';
+        inp.name  = name;
+        inp.value = i;
+        inp.addEventListener('change', () => saveVal(name, i));
+
+        const circle = document.createElement('span');
+        circle.className = 'radio-circle';
+
+        const num = document.createElement('span');
+        num.className   = 'radio-num';
+        num.textContent = i;
+
+        lbl.appendChild(inp);
+        lbl.appendChild(circle);
+        lbl.appendChild(num);
+        row.appendChild(lbl);
+      }
+    }
+
+    // Same but returns a container element (for action rows built inline)
+    function buildActionRadios(name) {
+      const wrap = document.createElement('div');
+      wrap.className = 'action-radios';
+      for (let i = 0; i <= 4; i++) {
+        const lbl = document.createElement('label');
+        lbl.className = 'radio-item sm';
+
+        const inp = document.createElement('input');
+        inp.type  = 'radio';
+        inp.name  = name;
+        inp.value = i;
+        inp.addEventListener('change', () => saveVal(name, i));
+
+        const circle = document.createElement('span');
+        circle.className = 'radio-circle';
+
+        const num = document.createElement('span');
+        num.className   = 'radio-num';
+        num.textContent = i;
+
+        lbl.appendChild(inp);
+        lbl.appendChild(circle);
+        lbl.appendChild(num);
+        wrap.appendChild(lbl);
+      }
+      return wrap;
+    }
+
+    // ── Actions section builder ───────────────────────────────────────────────
+
+    function buildActionsSection() {
+      const container = document.getElementById('actions-container');
+      container.innerHTML = '';
+
+      ACTIONS.forEach(group => {
+        const groupEl = document.createElement('div');
+        groupEl.className = 'actions-group';
+
+        const attrLabel = document.createElement('div');
+        attrLabel.className   = 'actions-attr-label';
+        attrLabel.textContent = group.attr;
+        groupEl.appendChild(attrLabel);
+
+        group.list.forEach(actionName => {
+          const fieldName = 'action_' + actionName.toLowerCase();
+
+          const row = document.createElement('div');
+          row.className = 'action-row';
+
+          const nameEl = document.createElement('span');
+          nameEl.className   = 'action-name';
+          nameEl.textContent = actionName;
+
+          row.appendChild(nameEl);
+          row.appendChild(buildActionRadios(fieldName));
+          groupEl.appendChild(row);
+        });
+
+        container.appendChild(groupEl);
+      });
+    }
+
+    // ── XP select builder ─────────────────────────────────────────────────────
+
+    function buildXpSelects() {
+      const configs = [
+        { id: 'xp-playbook', max: 8,  field: 'xp_playbook' },
+        { id: 'xp-insight',  max: 6,  field: 'xp_insight'  },
+        { id: 'xp-prowess',  max: 6,  field: 'xp_prowess'  },
+        { id: 'xp-resolve',  max: 6,  field: 'xp_resolve'  },
+      ];
+      configs.forEach(({ id, max, field }) => {
+        const sel = document.getElementById(id);
+        sel.innerHTML = '';
+        for (let i = 0; i <= max; i++) {
+          const opt = document.createElement('option');
+          opt.value       = i;
+          opt.textContent = i;
+          sel.appendChild(opt);
+        }
+        sel.addEventListener('change', () => saveVal(field, sel.value));
+      });
+    }
+
+    // ── Set a radio group value ───────────────────────────────────────────────
+
+    function setRadio(name, value) {
+      const radio = document.querySelector(`input[type="radio"][name="${name}"][value="${value}"]`);
+      if (radio) radio.checked = true;
+    }
+
+    // ── Load all values for current character ─────────────────────────────────
+
+    function loadAll() {
+      // Stress
+      setRadio('stress', loadVal('stress', 0));
+      document.getElementById('stress-warning')
+        .classList.toggle('visible', loadVal('stress', 0) >= 8);
+
+      // Coin
+      setRadio('coin', loadVal('coin', 0));
+
+      // Healing
+      setRadio('healing', loadVal('healing', 0));
+
+      // Harm text fields
+      HARM_IDS.forEach(id => {
+        document.getElementById(id).value = loadVal(id, '');
+      });
+
+      // Actions
+      ACTIONS.forEach(group => {
+        group.list.forEach(actionName => {
+          const field = 'action_' + actionName.toLowerCase();
+          setRadio(field, loadVal(field, 0));
+        });
+      });
+
+      // XP selects
+      [
+        ['xp-playbook', 'xp_playbook'],
+        ['xp-insight',  'xp_insight' ],
+        ['xp-prowess',  'xp_prowess' ],
+        ['xp-resolve',  'xp_resolve' ],
+      ].forEach(([id, field]) => {
+        document.getElementById(id).value = loadVal(field, 0);
+      });
+
+      // Textareas
+      document.getElementById('abilities-field').value = loadVal('abilities', '');
+      document.getElementById('notes-field').value     = loadVal('notes', '');
+    }
+
+    // ── Stress warning on change ──────────────────────────────────────────────
+
+    // (Delegate from the stress row after it's built)
+    document.getElementById('stress-row').addEventListener('change', e => {
+      if (e.target.name === 'stress') {
+        document.getElementById('stress-warning')
+          .classList.toggle('visible', Number(e.target.value) >= 8);
+      }
+    });
+
+    // ── Harm field listeners ──────────────────────────────────────────────────
+
+    HARM_IDS.forEach(id => {
+      document.getElementById(id).addEventListener('input', e => {
+        saveVal(id, e.target.value);
+      });
+    });
+
+    // ── Textarea autosave ─────────────────────────────────────────────────────
+
+    let flashTimer;
+    const saveFlash = document.getElementById('save-flash');
+
+    function wireTextarea(id, field) {
+      document.getElementById(id).addEventListener('input', e => {
+        saveVal(field, e.target.value);
+        saveFlash.classList.add('visible');
+        clearTimeout(flashTimer);
+        flashTimer = setTimeout(() => saveFlash.classList.remove('visible'), 1400);
+      });
+    }
+    wireTextarea('abilities-field', 'abilities');
+    wireTextarea('notes-field',     'notes');
+
+    // ── Character switch ──────────────────────────────────────────────────────
+
+    function activateCharacter() {
+      const hasChar = !!char;
+      document.getElementById('sheet-body').style.display  = hasChar ? 'block' : 'none';
+      document.getElementById('no-char-msg').style.display = hasChar ? 'none' : '';
+      if (hasChar) loadAll();
+    }
+
+    const charSelect = document.getElementById('char-select');
+    char = localStorage.getItem('sheet_active_char') || '';
+    charSelect.value = char;
+
+    charSelect.addEventListener('change', () => {
+      char = charSelect.value;
+      localStorage.setItem('sheet_active_char', char);
+      activateCharacter();
+    });
+
+    // ── Clear ─────────────────────────────────────────────────────────────────
+
+    document.getElementById('clear-btn').addEventListener('click', () => {
+      if (!char) return;
+      const label = char.charAt(0).toUpperCase() + char.slice(1);
+      if (!confirm('Clear all sheet data for ' + label + '? This cannot be undone.')) return;
+
+      const fields = [
+        'stress', 'coin', 'healing',
+        'xp_playbook', 'xp_insight', 'xp_prowess', 'xp_resolve',
+        'abilities', 'notes',
+        ...HARM_IDS,
+        ...ACTIONS.flatMap(g => g.list.map(a => 'action_' + a.toLowerCase())),
+      ];
+      fields.forEach(f => localStorage.removeItem(key(f)));
+      loadAll();
+    });
+
+    // ── Init ──────────────────────────────────────────────────────────────────
+
+    buildRadioRow('stress-row',  'stress',  0, 9, false);
+    buildRadioRow('coin-row',    'coin',    0, 4, false);
+    buildRadioRow('healing-row', 'healing', 0, 4, false);
+    buildActionsSection();
+    buildXpSelects();
+    activateCharacter();
+
+  </script>
+  <script src="gm.js"></script>
+</body>
+</html>

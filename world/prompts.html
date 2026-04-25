@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Prompts — The Antiquarians</title>
+  <link rel="stylesheet" href="../style.css">
+  <link id="player-css" rel="stylesheet" href="../player.css">
+  <script>if(localStorage.getItem('gm_mode')==='active'){document.getElementById('player-css').disabled=true;}</script>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="site-title">The Antiquarians</a>
+      <nav>
+        <a href="../party.html">Party</a>
+        <a href="../sessions.html">Sessions</a>
+        <a href="../story.html">Story</a>
+        <a href="../npcs.html">NPCs</a>
+        <a href="../world.html">World</a>
+        <a href="../tracker.html">My Sheet</a>
+        <a href="../gm/index.html" class="gm-only">GM</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container gm-only">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><a href="../world.html">World</a><span>›</span>Image Prompts</div>
+        <h1>Image Generation Prompts</h1>
+        <p class="subtitle">Active prompts for current session imagery, noble house crests, and compact seals. Older character and NPC prompts are in the <a href="prompts-archive.html">archive</a>.</p>
+      </div>
+
+      <!-- -- SETUP -- -->
+      <div class="section">
+        <h2>Setup — ChatGPT Image Generation</h2>
+        <div class="arc-block">
+          <div class="block-label">How to Generate Each Image</div>
+          <ol style="margin: 0.5rem 0 0 1.2rem; padding: 0; line-height: 2;">
+            <li>Open ChatGPT and start a new conversation</li>
+            <li>Paste the full prompt below — description + the base style line for that image type appended at the end</li>
+            <li>For portraits: add <em>"Generate as a tall portrait image (2:3 format)."</em></li>
+            <li>For scenes: add <em>"Generate as a wide landscape image (16:9 format)."</em></li>
+            <li>For crests and seals: add <em>"Generate as a square image."</em></li>
+            <li>If the result is too photorealistic, follow up: <em>"Make it more painterly, less like a photograph."</em></li>
+          </ol>
+        </div>
+        <div class="info-block">
+          <p><strong>Portrait base style</strong> (characters and NPCs):<br>
+          <em>Painterly oil portrait illustration, dark fantasy setting, dramatic low candlelight, muted desaturated color palette, dark vignette background, bust portrait framing, highly detailed face. Avoid modern clothing, avoid anime or cartoon style, avoid 3D render or photograph, avoid deformed hands.</em></p>
+        </div>
+        <div class="info-block">
+          <p><strong>Heraldic crest base style</strong> (noble house crests):<br>
+          <em>Flat heraldic badge illustration, gothic dark fantasy aesthetic, circular seal or shield format, bold simplified symbolic design in a woodcut or linocut style, limited two-tone or three-tone color palette, highly iconic and recognizable at small sizes, dark background. Avoid photorealism, avoid complex scenes, avoid characters or figures, avoid 3D rendering.</em></p>
+        </div>
+        <div class="info-block">
+          <p><strong>Ancient seal base style</strong> (harbor compact seals):<br>
+          <em>Ancient stone relief carving, pre-Cataclysm aesthetic, worn slightly at the edges with age, deep shadow filling the carved channels, circular seal or badge format, bold simplified line work suggesting organic or architectural detail, dark background. Avoid color fills — monochrome stone grey and shadow only. Avoid modern aesthetics, avoid photorealism, avoid 3D rendering.</em></p>
+        </div>
+        <div class="info-block">
+          <p><strong>Scene illustration base style</strong> (session set pieces):<br>
+          <em>Painterly dark fantasy scene illustration, wide landscape format (16:9), dramatic low dim lighting with a single-source cold or warm light, muted desaturated color palette, cinematic atmospheric composition with strong depth, highly detailed environment. Avoid characters in the foreground, avoid anime or cartoon style, avoid 3D render or photograph.</em></p>
+        </div>
+        <div class="info-block">
+          <p><strong>File locations:</strong><br>
+          Scene illustrations — <code>img/scenes/session-7/[name].png</code><br>
+          House crests — <code>img/houses/[lowercase-name].png</code><br>
+          Compact seals — <code>img/houses/[name].png</code><br>
+          Portraits — <code>img/characters/[name].png</code> or <code>img/npcs/[name].png</code></p>
+        </div>
+      </div>
+
+      <!-- -- SESSION 7 SET PIECES -- -->
+      <div class="section">
+        <h2>Session 7 — Set Piece Scenes</h2>
+        <div class="info-block">
+          <p>Landscape scene illustrations for player-facing display during the session. Save to <code>img/scenes/session-7/</code>. Show on the <a href="../gm/session-7-images.html">Session 7 Images</a> page.</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">The Statue in Supplication — img/scenes/session-7/statue-supplication.png</div>
+          <p>A large weathered stone figure standing in the center of a dim underground shrine hall, arms raised overhead, palms facing upward, fingertips pointing outward — the gesture of offering or presentation, formal and deliberate. The figure is featureless, worn smooth by age. Shallow offerings of coins and small objects scattered at its base. Other partially-visible shrine niches in the dark background, each housing smaller figures. Cold blue-grey ambient light from above, deep shadow in the far recesses. The composition suggests reverence but also neglect — the offerings are old, the hall abandoned.</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">The Statue in Fear — img/scenes/session-7/statue-fear.png</div>
+          <p>The same weathered stone figure — same hall, same base — but the arms are now raised with palms facing up and fingertips curling backward toward the figure's own face, the gesture of warding off or pleading. A ghostly double-impression shimmers over the stone: both positions visible simultaneously, the supplication pose and this new fearful pose layered as a translucent ghost field, as if the statue is caught between two states. The ambient lighting has shifted colder, the shadow deeper. The offerings at the base have not moved. The uncanny quality comes from the overlap — not a transformation, but a reading that has changed.</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">The Observer — img/scenes/session-7/observer.png</div>
+          <p>A creature descending from a high vaulted stone ceiling in a dim underground chamber — a body loosely resembling a large starfish or cephalopod, five to seven radiating limbs moving at wrong angles, some folding inward, some extended, the motion deeply wrong in a way that resists description. At the center of the body mass, one enormous single eye, open and absolutely still, the iris a cold pale colour, staring downward. The creature is ink-dark against the stone ceiling above it. No other detail in the chamber — only the creature, the eye, and the faint dim light that seems to come from nowhere. The composition centers entirely on the eye.</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">The Puddle — img/scenes/session-7/puddle-void.png</div>
+          <p>A small unremarkable puddle on an old stone floor in a dim underground hall — viewed from standing height looking down, the puddle perhaps a meter across, edges perfectly ordinary. But the reflection inside it is wrong: instead of reflecting the stone ceiling above, the puddle's surface shows the open dark void of a harbor bay from below — infinite black water descending, faint cold light filtering down from an unseen surface far overhead, the vast open nothing of deep water dropping away in all directions. The contrast between the tiny puddle and the vast void it contains. No creatures visible. Just the infinite dark and the faint impossible light.</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">The Compact Door — img/scenes/session-7/compact-door.png</div>
+          <p>A massive ancient stone door set into a rough-hewn underground wall — pre-Cataclysm construction, the stone older than anything visible in the current city. The arch above the door frames six carved circular seals in two rows: three on the left with sharp well-preserved carving, three on the right with visible cracks running through the stone, one cracked seal split nearly in half. The door itself has no visible handle or keyhole — sealed by something other than mechanics. In the foreground, the scattered remains of old equipment: broken lanterns, overturned packs, a corroded tool — evidence of others who stopped here and could not proceed. Dim lantern light from below illuminating the lower half of the door, the seals visible in the middle distance.</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">The Bay Chamber — img/scenes/session-7/bay-chamber.png</div>
+          <p>A wide low underground chamber with a floor covered in still, heavy dark water — only a few inches deep but impossibly dense and dark, undisturbed. Across the full width and height of the far wall, a vertical membrane of translucent harbour water, floor to ceiling, the deep bay visible through it as a dark shifting mass — the wall between the chamber and the open harbour, thin as glass but intact. Beyond the membrane, barely visible through the dark water, a low moss-covered stone pedestal holding a single small coin, dry and alone. The chamber is otherwise empty. Cold ambient light filters through the membrane from the harbour side, casting everything in deep grey-blue. The composition emphasizes the stillness, the weight of the water, and the coin on the other side of the impossible barrier.</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">The Ruptured Pump — img/scenes/session-7/pump-echo.png</div>
+          <p>A descending stone corridor narrowing slightly toward a large industrial pump mechanism mounted in the wall — pre-Cataclysm construction, massive iron and brass, badly ruptured: a section of casing torn open, internal mechanisms frozen, a large crack running up the stone around it. Dark staining on the floor below the rupture. Overlaid on the physical wreck, a faint ghost impression of the same pump intact and operational: a translucent echo-figure working the mechanism with practiced rhythm, the phantom pumping action cycling even though the real device has been dead for a century. The ghost impression is not threatening — just present, locked in repetition. Dim lantern light from the near side, the corridor disappearing into darkness beyond the pump.</p>
+        </div>
+      </div>
+
+      <!-- -- NOBLE HOUSE CRESTS -- -->
+      <div class="section">
+        <h2>Noble House Crests</h2>
+        <div class="info-block">
+          <p>Use the heraldic crest base style above. Save path: <code>img/houses/[lowercase-name].png</code></p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">House Strangford — img/houses/strangford.png</div>
+          <p>a massive stylized leviathan coiled around an anchor chain, its body serpentine and immense, scales suggested in simplified bold line work, deep navy and gold on dark background — the crest of the most powerful house in the city, wealth measured in dead leviathans, the symbol radiating dominance and deep-sea weight</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">House Bowmore — img/houses/bowmore.png</div>
+          <p>a wide stone arch bridge spanning dark water, white and pale grey against deep blue, the arch bold and simplified into a clean geometric shape — Bowmore Bridge is the house's monument and their name, old stone wealth and civic legacy, the oldest construction still standing and still named after them</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">House Clelland — img/houses/clelland.png</div>
+          <p>a watchman's star badge with a heavy iron key passing through its center, black and tarnished brass on dark background, the star bold and slightly asymmetrical — the badge of civic authority, corrupt and comfortable, the symbol of a house that controls the law because the law is theirs to control</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">House Dunvil — img/houses/dunvil.png</div>
+          <p>a ship's anchor and a forge hammer crossed at their centers, iron grey and deep crimson on dark background, bold industrial linework — fleet and forge combined into one symbol, naval command and manufacturing capacity inseparable, the crest of a house that builds the ships and sinks the enemies</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">House Penderyn — img/houses/penderyn.png</div>
+          <p>a tall glass spirit bottle with a faint luminous impression visible within it — a ghost, barely suggested, pressing against the inside of the glass — deep purple and pale cold silver on dark background, the bottle's stopper ornate and sealed, the symbol of a house obsessed with the dead and the knowledge they carry</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">House Rowan — img/houses/rowan.png</div>
+          <p>a fortress tower with crenellated battlements, squat and immovable, a single sword leaning upright against its base, dark red and black on dark background, the architecture suggesting a castle within a castle — a house that rules from behind walls, military and inward-facing, the symbol of the city's land army command</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">House Dalmorrian — img/houses/dalmorrian.png</div>
+          <p>a simplified tree — pale brown trunk broad at the base, symmetrical yellowish-green leaf canopy reduced to clean rounded shapes, the design stripped down by generations who no longer had a living tree to reference, on dark background — a pre-Cataclysm house carrying a memory of the world before the sun went out, the crest now a symbol whose original subject is almost mythological</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">House Quellin — img/houses/quellin.png</div>
+          <p>a merchant's balance scales perfectly level, a coin on each pan, copper and deep green on dark background, clean and deliberate linework — new money rendered as old symbol, a house whose title is only two generations old but whose ambition reads as older, the scales suggesting fairness while meaning commerce, everything priced and everything negotiable</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">House Valchek — img/houses/valchek.png</div>
+          <p>a rolled parchment scroll tied with a wax seal, the seal's imprint visible in simplified detail, dark burgundy and aged parchment on dark background — the crest of a house whose power is entirely documentary, built on deeds and water rights and transit easements accumulated over centuries, the symbol suggesting that whoever holds the paper holds the thing</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">House Scurlock — img/houses/scurlock.png</div>
+          <p>a spider centered in a partial web, ash-grey and near-black on dark background, the spider's body bold and iconic, legs extending outward in simplified symmetrical line work, the web radiating from it in sparse geometric threads — a house that officially no longer exists but whose threads still reach everywhere, old power operating through connection and patience, the symbol of something that does not announce itself and does not need to</p>
+        </div>
+      </div>
+
+      <!-- -- HARBOR COMPACT SEALS -- -->
+      <div class="section">
+        <h2>Harbor Compact — Ancient Seals</h2>
+        <div class="info-block">
+          <p>Pre-Cataclysm stone carving style — carved when the things they depict were real. Use the ancient seal base style above. Save path: <code>img/houses/[name].png</code></p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">Ancient Dalmorrian Seal — img/houses/dalmorrian-ancient.png</div>
+          <p>A full tree rendered in intricate pre-Cataclysm stone carving style — wide spreading canopy with individually suggested leaves in clusters, a thick detailed trunk with bark texture implied in the line work, visible surface roots at the base, the whole composition full and alive with organic complexity. The same fundamental symbol as the simplified modern Dalmorrian crest but with all the detail that centuries of simplification removed — clearly the ancestor of the modern version, unmistakably a tree by someone who had stood under one. Ancient stone relief aesthetic, worn slightly at the edges, deep shadow filling the carved channels, circular seal format.</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">Second Intact Compact Bloodline — img/houses/compact-seal-2.png</div>
+          <p>A standing heron, one leg raised, neck curved in the watchful pose — rendered in pre-Cataclysm stone carving style, the feather detail suggested in careful line work, the bird poised over implied water at its feet, a creature of the shore and the bay margin. The symbol of a house whose identity was inseparable from the water's edge. Ancient stone relief aesthetic, worn at the edges, deep shadow in the carved channels, circular seal format.</p>
+        </div>
+
+        <div class="arc-block">
+          <div class="block-label">Third Intact Compact Bloodline — img/houses/compact-seal-3.png</div>
+          <p>A lighthouse tower with a flame at its crown, the flame rendered as carved radiating lines suggesting light, the tower's stonework implied in bold horizontal banding, waves simplified to curved lines at the base — a beacon marking the harbor mouth, pre-Cataclysm stone carving style, the whole image speaking of civic duty and the protection of those who approach the shore. Ancient stone relief aesthetic, worn at the edges, deep shadow in the carved channels, circular seal format.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="../gm.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Running the Game — The Antiquarians</title>
+  <link rel="stylesheet" href="../style.css">
+  <link id="player-css" rel="stylesheet" href="../player.css">
+  <script>if(localStorage.getItem('gm_mode')==='active'){document.getElementById('player-css').disabled=true;}</script>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="site-title">The Antiquarians</a>
+      <nav>
+        <a href="../party.html">Party</a>
+        <a href="../sessions.html">Sessions</a>
+        <a href="../story.html">Story</a>
+        <a href="../npcs.html">NPCs</a>
+        <a href="../world.html">World</a>
+        <a href="../tracker.html">My Sheet</a>
+        <a href="../gm/index.html" class="gm-only">GM</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><a href="index.html">GM Reference</a><span>›</span>Running the Game</div>
+        <h1>Running the Game</h1>
+        <p class="subtitle">The action roll, position and effect, consequences, and how to keep the fiction moving.</p>
+      </div>
+
+      <div class="section">
+        <h2>The Action Roll</h2>
+        <div class="arc-block">
+          <div class="block-label">When to Call for a Roll</div>
+          <p>Only call for a roll when the outcome is uncertain AND failure is interesting. If success is guaranteed (not challenging enough) or failure just stops the scene dead (not interesting), don't roll — just narrate the result. The roll is for situations where both success and failure open up different, engaging possibilities. Ask yourself: <em>what happens if they fail?</em> If the answer is boring, don't roll.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Building the Dice Pool</div>
+          <p>The player rolls a number of d6 equal to their action rating (1–4 dots). If the rating is 0, they roll 2d6 and take the lowest result. Apply bonuses before rolling: push yourself (+1d, costs 2 stress), accept a devil's bargain (+1d, GM names a cost), get assistance (+1d, helper takes 1 stress). Take the single highest die result.</p>
+        </div>
+        <div class="secret-block">
+          <div class="block-label">Results</div>
+          <ul>
+            <li><strong>1–3 — Bad outcome.</strong> Things go wrong. The character doesn't achieve their goal and faces a consequence.</li>
+            <li><strong>4–5 — Partial success.</strong> They succeed, but with a consequence. Or they succeed at a reduced level of effect. Or they get what they wanted but something else goes wrong.</li>
+            <li><strong>6 — Full success.</strong> They do it. No consequence (though you can still introduce complications from the fiction).</li>
+            <li><strong>Critical (multiple 6s) — Exceptional success.</strong> They do it with superior effect. Something extra goes right.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Position &amp; Effect</h2>
+        <div class="arc-block">
+          <div class="block-label">Set Before the Roll</div>
+          <p>Always establish position and effect before dice hit the table. This is not negotiable — players need to know what they're risking and what they can achieve. Announce it clearly: <em>"This is risky, standard effect."</em> Players can then decide whether to push for better position/effect or accept the terms.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Position — How Dangerous Is This?</div>
+          <ul>
+            <li><strong>Controlled</strong> — Low risk. You have the upper hand. Failure means a complication or cost, not disaster. Consequences are mild.</li>
+            <li><strong>Risky</strong> — The default. You're in danger. Failure means serious consequences. This is most action rolls.</li>
+            <li><strong>Desperate</strong> — You're in serious trouble. Failure means severe consequences. Even partial success may come at a heavy cost. Also marks XP for the attribute used.</li>
+          </ul>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Effect — How Much Do They Accomplish?</div>
+          <ul>
+            <li><strong>Great</strong> — More than expected. Tick two segments on a clock, neutralize a threat fully, accomplish the goal with extras.</li>
+            <li><strong>Standard</strong> — Normal accomplishment. One segment, one obstacle cleared, one thing done.</li>
+            <li><strong>Limited</strong> — Partial accomplishment. Half a segment, a reduced version of the goal, they get something but not everything.</li>
+            <li><strong>Zero</strong> — They can't meaningfully affect this at all with this approach. Tell them before they roll; don't waste their action.</li>
+          </ul>
+        </div>
+        <div class="info-block">
+          <p><strong>Factors that affect effect:</strong> Potency (is their tool/approach well-suited?), Scale (how many are they against?), Quality (their equipment vs. the opposition's). Each factor shifts effect up or down. State your reasoning briefly — players should understand why effect is limited before they commit.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Consequences</h2>
+        <div class="arc-block">
+          <div class="block-label">Types of Consequences</div>
+          <ul>
+            <li><strong>Harm</strong> — A character is hurt. Apply harm at a level appropriate to the fiction and position. Controlled = Level 1. Risky = Level 2. Desperate = Level 3.</li>
+            <li><strong>Complication</strong> — A new threat emerges, a clock ticks, a faction notices, a resource is depleted.</li>
+            <li><strong>Reduced Effect</strong> — They succeed, but accomplish less. Good for 4–5 results where you want success-with-cost rather than a setback.</li>
+            <li><strong>Worse Position</strong> — The situation deteriorates. Their next action will be at desperate instead of risky, for example.</li>
+            <li><strong>Lost Opportunity</strong> — The window closes. They can't try the same approach again — the situation has changed.</li>
+          </ul>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Resistance Rolls</div>
+          <p>A player can always resist a consequence by rolling their relevant attribute (Insight, Prowess, Resolve) and taking stress equal to <strong>6 minus the highest die</strong>. On a critical (two 6s), they take 0 stress. This can reduce or negate the consequence entirely — work out what "resisting" it means in the fiction first. Resistance happens after the outcome is announced but before it takes full effect. Don't forget to offer it — players sometimes don't ask.</p>
+        </div>
+        <div class="info-block">
+          <p><strong>The golden rule:</strong> Consequences should feel earned, not punitive. A bad roll on a desperate action means something went badly wrong — make it feel that way. A 4–5 on a risky roll means partial success — let them have the success, then add the cost. Don't use consequences to invalidate player choices; use them to complicate them.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Other Roll Types</h2>
+        <div class="arc-block">
+          <div class="block-label">Fortune Rolls</div>
+          <p>Used when you need to determine an outcome that isn't a character action: does the fence have what they need? Does the patrol pass by? How well does this NPC perform their job? Build a pool of d6 based on how favorable the circumstances are (1d for poor odds, 3d for good odds) and apply the 1–3/4–5/6 scale. Fortune rolls don't have position or effect — just outcome quality. Use them sparingly to resolve offscreen events, not as a substitute for player agency.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Flashbacks</div>
+          <p>Any player can call a flashback at any time to establish something their character did before the current moment. Brief, plausible actions cost 0 stress. Reasonable preparations cost 1 stress. Complicated setups or things that stretch plausibility cost 2 stress. If what they describe requires a roll, make the roll in the flashback. Flashbacks are a powerful tool — they let players retroactively be competent. Don't deny them; use stress cost to calibrate ambition.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Gathering Information</div>
+          <p>When players want to know something, they can roll to gather information with an appropriate action. The quality of the result determines how much they learn — on a 6, they get exactly what they asked for plus something useful they didn't know to ask. On a 4–5, they get partial or less actionable information. On a 1–3, they get wrong or incomplete information and possibly a complication. Gathering information well is a skill; reward players who ask specific, smart questions.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>The Engagement Roll</h2>
+        <div class="arc-block">
+          <div class="block-label">Starting a Score</div>
+          <p>At the start of every score, after the players describe their plan and approach, roll the engagement roll to determine where the scene opens. Base pool is 1d6. Adjust up for a well-suited plan, good information, appropriate gear, or favorable circumstances. Adjust down for alarm, opposition preparation, bad intel, or an approach that doesn't fit. The result sets the initial position:</p>
+          <ul>
+            <li><strong>Critical</strong> — Ideal circumstances. Open in a controlled position with an advantage.</li>
+            <li><strong>6</strong> — Good start. Open in a controlled position.</li>
+            <li><strong>4–5</strong> — Standard start. Open in a risky position.</li>
+            <li><strong>1–3</strong> — Bad start. Open in a desperate position, or a complication has already occurred.</li>
+          </ul>
+        </div>
+        <div class="info-block">
+          <p>The engagement roll is not about whether the plan works — it's about where the plan puts you when the action starts. A great engagement roll on a terrible plan just means the terrible plan is already in motion with no easy exit. Don't protect players from their plans; let the plan reveal its flaws through play.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="../gm.js"></script>
+</body>
+</html>

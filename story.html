@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story � The Antiquarians</title>
+  <link rel="stylesheet" href="style.css">
+  <link id="player-css" rel="stylesheet" href="player.css">
+  <script>if(localStorage.getItem('gm_mode')==='active'){document.getElementById('player-css').disabled=true;}</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="site-title">The Antiquarians</a>
+      <nav>
+        <a href="party.html">Party</a>
+        <a href="sessions.html">Sessions</a>
+        <a href="story.html">Story</a>
+        <a href="npcs.html">NPCs</a>
+        <a href="world.html">World</a>
+        <a href="tracker.html">My Sheet</a>
+        <a href="gm/index.html" class="gm-only">GM</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>�</span>Story</div>
+        <h1>The Story</h1>
+        <p class="subtitle">The forces, factions, and ancient machinery the crew has stumbled into</p>
+      </div>
+
+      <div class="section">
+        <h2>The Situation</h2>
+        <div class="arc-block">
+          <div class="block-label">Current Understanding</div>
+          <p>Lord Scurlock is an ally helping them oppose Setarra and contain a dangerous occult threat. He has directed them to retrieve the Reliquary, and says two more components are needed.</p>
+        </div>
+        <div class="secret-block gm-only">
+          <div class="block-label">The Truth</div>
+          <p>Scurlock is beholden to Setarra. He's directing the crew to collect the very items she needs. When he has all three, he plans to hand them over in exchange for his freedom. He doesn't want to destroy the city � but he'll endanger it to save himself.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Major Elements</h2>
+        <div class="card-grid">
+          <a href="story/setarra.html" class="card">
+            <img src="img/npcs/setarra.png" alt="Setarra" class="card-thumb" onerror="this.style.display='none'">
+            <div class="card-title">Setarra</div>
+            <div class="card-subtitle">Demon of Dust, Hands &amp; Deals</div>
+            <div class="card-desc">The primary antagonist. Patient, distributed, and operating through agents who don't know each other. She's found the crew. She wants the Ledger.</div>
+          </a>
+          <a href="story/harbor-compact.html" class="card">
+            <img src="img/npcs/the-watcher.png" alt="Something Below" class="card-thumb" onerror="this.style.display='none'">
+            <div class="card-title">Something Below</div>
+            <div class="card-subtitle">A presence in the water � ancient, unnamed</div>
+            <div class="card-desc">Something is out there in the harbor. The crew has glimpsed it � in the black water outside the train windows, in the weight of the Ledger. They don't know what it is yet.</div>
+          </a>
+          <a href="story/drowned-ledger.html" class="card">
+            <img src="img/items/drowned-ledger.png" alt="The Drowned Ledger" class="card-thumb" onerror="this.style.display='none'">
+            <div class="card-title">The Drowned Ledger</div>
+            <div class="card-subtitle">Currently held by Scurlock</div>
+            <div class="card-desc">An ancient legal document connected to Something Below. One of three ritual components Scurlock says are needed. Not treasure � its weight hasn't been fully mapped yet.</div>
+          </a>
+          <a href="story/scurlock.html" class="card">
+            <img src="img/npcs/scurlock.png" alt="Lord Scurlock" class="card-thumb" onerror="this.style.display='none'">
+            <div class="card-title">Lord Scurlock</div>
+            <div class="card-subtitle">The crew's patron � ancient noble, long memory</div>
+            <div class="card-desc">He knows how to get Setarra off their backs � it requires three ritual components, and he's directing the crew to collect them. What exactly they're for, he hasn't said.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section gm-only">
+        <h2>GM Lore</h2>
+        <div class="card-grid">
+          <a href="story/harbor-compact.html" class="card">
+            <img src="img/houses/dalmorrian-ancient.png" alt="The Harbor Compact" class="card-thumb" onerror="this.style.display='none'">
+            <div class="card-title">The Harbor Compact</div>
+            <div class="card-subtitle">The six seals, the Watcher, the ritual</div>
+            <div class="card-desc">Full compact lore: the three intact bloodlines, the three cracked seals, Setarra's play, the ritual components, and what failure means for the city.</div>
+          </a>
+          <a href="story/city-spirit.html" class="card">
+            <div class="card-title">The Spirit of the City</div>
+            <div class="card-subtitle">Nascent, afraid, resisting</div>
+            <div class="card-desc">What the wrong echoes and watching faces are. Its relationship with the Watcher, with Scurlock, with the crew. The Conductor as its instrument. How it manifests at the table.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section gm-only">
+        <h2>Campaign Arc</h2>
+        <ul>
+          <li><strong>Now:</strong> Crew collecting ritual components under Scurlock's direction, unknowingly serving Setarra</li>
+          <li><strong>Mid-campaign:</strong> Scurlock's betrayal � he attempts to deliver the components to Setarra</li>
+          <li><strong>Endgame:</strong> Setarra seizes the harbor compact through a mortal intermediary (likely Jared). The Tide Tithe event. Slow collapse begins.</li>
+          <li><strong>Campaign 2:</strong> Recover the Ledger, repair the compact, deal with what got through while the Watcher was compromised.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="gm.js"></script>
+</body>
+</html>

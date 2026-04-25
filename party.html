@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party — The Antiquarians</title>
+  <link rel="stylesheet" href="style.css">
+  <link id="player-css" rel="stylesheet" href="player.css">
+  <script>if(localStorage.getItem('gm_mode')==='active'){document.getElementById('player-css').disabled=true;}</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="site-title">The Antiquarians</a>
+      <nav>
+        <a href="party.html">Party</a>
+        <a href="sessions.html">Sessions</a>
+        <a href="story.html">Story</a>
+        <a href="npcs.html">NPCs</a>
+        <a href="world.html">World</a>
+        <a href="tracker.html">My Sheet</a>
+        <a href="gm/index.html" class="gm-only">GM</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="index.html">Home</a></div>
+        <h1>The Antiquarians</h1>
+        <p class="subtitle">Hawkers dealing in rare and illegal artifacts — Nightmarket, Doskvol</p>
+      </div>
+
+      <!-- -- CREW STATUS -- -->
+      <div class="section">
+        <h2>Crew Status</h2>
+        <div class="stat-row">
+          <div>
+            <div class="stat-label">Type</div>
+            <div class="stat-value">Hawkers</div>
+          </div>
+          <div>
+            <div class="stat-label">Reputation</div>
+            <div class="stat-value">Discreet</div>
+          </div>
+          <div>
+            <div class="stat-label">Tier</div>
+            <div class="stat-value">1</div>
+          </div>
+          <div>
+            <div class="stat-label">Hold</div>
+            <div class="stat-value">Strong</div>
+          </div>
+          <div>
+            <div class="stat-label">Heat</div>
+            <div class="stat-value">7</div>
+          </div>
+          <div>
+            <div class="stat-label">Wanted</div>
+            <div class="stat-value">0</div>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div>
+            <div class="stat-label">Rep — 6 / 12</div>
+            <div class="stat-value" style="font-size:1rem; letter-spacing:0.1rem;">????????????</div>
+          </div>
+          <div>
+            <div class="stat-label">Coin — 4</div>
+            <div class="stat-value" style="font-size:1rem; letter-spacing:0.1rem;">??????</div>
+          </div>
+          <div>
+            <div class="stat-label">Crew XP — 4 / 6</div>
+            <div class="stat-value" style="font-size:1rem; letter-spacing:0.1rem;">??????</div>
+          </div>
+          <div>
+            <div class="stat-label">Turf</div>
+            <div class="stat-value">1</div>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="block-label">Faction Alignment — The Hive</div>
+          <p>The Antiquarians operate under Hive protection. This makes them structurally opposed to The Unseen and creates friction with any faction The Hive is currently targeting.</p>
+        </div>
+      </div>
+
+      <!-- -- ADVANCEMENT -- -->
+      <div class="section">
+        <h2>Crew Advancement</h2>
+        <div class="arc-block">
+          <div class="block-label">How It Works — Plain Version</div>
+          <p>The crew earns XP by doing things that fit who they are: pulling off scores that match their type, trying risky things, expressing their rep, etc. When the XP track hits 6, the crew picks one advancement from the options below. Think of it as: the crew gets collectively better, adds resources, or expands its reach.</p>
+          <p style="margin-top:0.75rem;"><strong>Currently at 4/6 XP.</strong> Two more good sessions and they can pick something.</p>
+        </div>
+        <div class="info-block">
+          <div class="block-label">What They Can Pick (Hawkers Advancement Options)</div>
+          <ul class="upgrade-list">
+            <li><span class="upgrade-pip">?</span><strong>New Special Ability</strong> — unlock another Hawkers crew ability</li>
+            <li><span class="upgrade-pip">?</span><strong>Cohort</strong> — add a gang or expert (a crew of thugs, a skilled individual on retainer)</li>
+            <li><span class="upgrade-pip">?</span><strong>Lair Upgrade</strong> — improve the Sunken City (add Vault, Ritual Space, Workshop, etc.)</li>
+            <li><span class="upgrade-pip">?</span><strong>Quality Upgrade</strong> — improve a tool or asset quality level</li>
+            <li><span class="upgrade-pip">?</span><strong>Carriage ? Armored</strong> — upgrade Bonnie &amp; Clyde's carriage from unarmored to armored</li>
+            <li><span class="upgrade-pip">?</span><strong>Training</strong> — add another attribute to train (currently have Resolve)</li>
+            <li><span class="upgrade-pip">?</span><strong>Expand Turf</strong> — claim an additional territory; turf provides passive benefits each downtime</li>
+          </ul>
+        </div>
+        <div class="info-block">
+          <div class="block-label">Tier Advancement — The Long Game</div>
+          <p>Going from Tier 1 ? Tier 2 requires Rep to wrap around to 12 (it's currently at 6), plus spending Coin, plus having Strong Hold (? already). It's a meaningful jump — Tier 2 means the crew is a recognized mid-level faction in Doskvol, not just a promising newcomer. They're about halfway there on Rep.</p>
+        </div>
+      </div>
+
+      <!-- -- CURRENT UPGRADES -- -->
+      <div class="section">
+        <h2>Current Upgrades</h2>
+        <ul class="upgrade-list">
+          <li><span class="upgrade-pip">?</span><strong>Special Ability: The Good Stuff</strong> — your goods are always of top quality when you deal in them. +1d to Consort when dealing with clients who value fine merchandise.</li>
+          <li><span class="upgrade-pip">?</span><strong>Carriage — Level 1 (Unarmored)</strong> — one carriage, two goats (Bonnie &amp; Clyde). Practical, inconspicuous, not armored.</li>
+          <li><span class="upgrade-pip">?</span><strong>Lair: Hidden</strong> — the Sunken City's entrance is concealed. Not on any official map.</li>
+          <li><span class="upgrade-pip">?</span><strong>Lair: Secure — Level 1</strong> — basic security measures in place.</li>
+          <li><span class="upgrade-pip">?</span><strong>Training: Resolve</strong> — crew members can train Resolve actions during downtime.</li>
+        </ul>
+        <div class="info-block" style="margin-top:1rem;">
+          <div class="block-label">Note on Hawking</div>
+          <p>The crew's original goal was running the Sunken City as an underground auction house for illegal artifacts — that's the Hawkers model. They haven't leaned into this much yet. Downtime is the natural time to push on it: running a sale, finding buyers, moving inventory. It's also their main legitimate income source.</p>
+        </div>
+      </div>
+
+      <!-- -- CREW ASSETS -- -->
+      <div class="section">
+        <h2>Crew Assets — Uncle Jared's Contributions</h2>
+        <div class="arc-block">
+          <div class="block-label">Uncle Jared's Warehouse — Train Prowess</div>
+          <p>Access to <a href="npcs/jared.html">Jared</a>'s warehouse provides a legitimate storage and staging location. Jared offered the arrangement himself — come work in his warehouse, bulk up some. He's glad to have the crew there. Mechanically grants access to Train Prowess — crew members can train Prowess actions during downtime here.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Uncle Jared's Goat Carriage Delivery — Upgrade Opportunity</div>
+          <p>Access to Jared's delivery carriage operation. Opportunity to upgrade the current cart into something more capable. However: the Cabbies (a Wraiths faction ally) may view a crew-operated delivery service as competition. Upgrading this asset could create friction with the Wraiths indirectly.</p>
+        </div>
+        <div class="info-block">
+          <div class="block-label">Bonnie &amp; Clyde</div>
+          <p>The two goats who pull the crew's carriage. They are functional and, by all accounts, professional.</p>
+        </div>
+      </div>
+
+      <!-- -- CONTACT -- -->
+      <div class="section">
+        <h2>Crew Contact</h2>
+        <div class="info-block">
+          <div class="block-label"><a href="npcs/anya.html">Anya</a> — Dilettante / Influencer</div>
+          <p>The crew's primary Hive-side contact. Social reach, upper-circle access, family ties to Alaric. The day-to-day relationship between the Antiquarians and The Hive runs through her. There is also an unspoken arrangement developing on a more personal level between her and Alaric that neither has quite named aloud.</p>
+        </div>
+      </div>
+
+      <!-- -- HQ -- -->
+      <div class="section">
+        <h2>Headquarters — The Sunken City</h2>
+        <p>A hidden underground auction house beneath Nightmarket. Canal-accessible, built into buried ruins. Front business: <strong><a href="npcs/marge.html">Marge</a>'s Antique Shop</strong> — Marge is deadpan, chronically underpaid, and universally beloved.</p>
+        <div class="info-block">
+          <p>The name is more literal than most clients realize. The HQ sits atop genuine pre-Doskvol ruins — the kind that predate the current city's construction. Some tunnels go deeper than they should.</p>
+        </div>
+        <div class="info-block">
+          <p><strong>Location:</strong> Nightmarket &nbsp;|&nbsp; <strong>Access:</strong> Hidden entrance via shop front &nbsp;|&nbsp; <strong>Security:</strong> Secure Level 1</p>
+        </div>
+      </div>
+
+      <!-- -- PROGRESS CLOCKS -- -->
+      <div class="section">
+        <h2>Progress Clocks — <a href="clocks.html" style="font-size:0.85rem; font-weight:400;">View Full Clocks Page ?</a></h2>
+        <div class="info-block">
+          <div class="block-label">Active — Character</div>
+          <div class="clock-item clock-urgent">
+            <span class="clock-name"><a href="characters/victor.html">Victor</a> — Ghost Workshop</span>
+            <span class="clock-dots">??????</span>
+            <span class="clock-label">5/6</span>
+          </div>
+          <div class="clock-item">
+            <span class="clock-name"><a href="characters/alaric.html">Alaric</a> — Make Anya his Girlfriend</span>
+            <span class="clock-dots">????</span>
+            <span class="clock-label">3/4</span>
+          </div>
+          <div class="clock-item">
+            <span class="clock-name"><a href="characters/alaric.html">Alaric</a> — Learn about Cults</span>
+            <span class="clock-dots">??????</span>
+            <span class="clock-label">1/6</span>
+          </div>
+          <div class="clock-item">
+            <span class="clock-name"><a href="characters/flint.html">Flint</a> — Lawyer Rough Studies</span>
+            <span class="clock-dots">??????</span>
+            <span class="clock-label">1/6</span>
+          </div>
+          <div class="clock-item">
+            <span class="clock-name"><a href="characters/harrow.html">Harrow</a> — Find Distraction for Setarra</span>
+            <span class="clock-dots">????????</span>
+            <span class="clock-label">1/8</span>
+          </div>
+        </div>
+        <div class="info-block gm-only" style="margin-top:0.75rem;">
+          <div class="block-label">Active — External Pressure</div>
+          <div class="clock-item clock-threat">
+            <span class="clock-name"><a href="npcs/marla-vale.html">Marla Vale</a> — Investigating Alaric</span>
+            <span class="clock-dots">??????</span>
+            <span class="clock-label">1/6</span>
+          </div>
+          <div class="clock-item">
+            <span class="clock-name"><a href="characters/alaric.html">Alaric</a> — Placates Marla</span>
+            <span class="clock-dots">????</span>
+            <span class="clock-label">1/4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- -- THE CREW -- -->
+      <div class="section">
+        <h2>The Crew</h2>
+        <div class="card-grid">
+          <a href="characters/harrow.html" class="card">
+            <img src="img/characters/harrow.png" alt="Harrow" class="card-thumb" onerror="this.style.display='none'">
+            <div class="badge badge-whisper">Whisper</div>
+            <div class="card-title">Harrow</div>
+            <div class="card-desc">Marked by Setarra. She wants to reclaim him. Obligation, debt, and the question of whether a deal can be escaped.</div>
+          </a>
+          <a href="characters/alaric.html" class="card">
+            <img src="img/characters/alaric.png" alt="Alaric" class="card-thumb" onerror="this.style.display='none'">
+            <div class="badge badge-slide">Slide / Noble</div>
+            <div class="card-title">Alaric</div>
+            <div class="card-desc">Noble doing crime on a lark — only the stakes keep proving higher than expected. Something about his family name keeps surfacing. Under Valchek suspicion.</div>
+          </a>
+          <a href="characters/flint.html" class="card">
+            <img src="img/characters/flint.png" alt="Flint" class="card-thumb" onerror="this.style.display='none'">
+            <div class="badge badge-lurk">Lurk</div>
+            <div class="card-title">Flint</div>
+            <div class="card-desc">Obsessed with locks and systems of custody. His parents died in an industrial accident. The responsible party is closer than he knows.</div>
+          </a>
+          <a href="characters/victor.html" class="card">
+            <img src="img/characters/victor.png" alt="Victor" class="card-thumb" onerror="this.style.display='none'">
+            <div class="badge badge-leech">Leech</div>
+            <div class="card-title">Victor / Eyes</div>
+            <div class="card-desc">Ex-fabricator with a complicated past and a talent for building things that shouldn't exist. Carries a grudge he doesn't talk about.</div>
+          </a>
+          <a href="characters/castia.html" class="card">
+            <img src="img/characters/castia.png" alt="Costya" class="card-thumb" onerror="this.style.display='none'">
+            <div class="badge badge-hound">Hound</div>
+            <div class="card-title">Costya</div>
+            <div class="card-desc">Spy background. Touched the train token and hasn't been quite right since. Something opened in her — what she's seeing, she can't explain yet.</div>
+          </a>
+          <a href="characters/brick.html" class="card">
+            <img src="img/characters/brick.png" alt="Brick" class="card-thumb" onerror="this.style.display='none'">
+            <div class="badge badge-cutter">Cutter</div>
+            <div class="card-title">Brick</div>
+            <div class="card-desc">Former dockworker. Sees delayed reflections in water. The harbor knows him — and something in the harbor has started paying attention.</div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="gm.js"></script>
+</body>
+</html>

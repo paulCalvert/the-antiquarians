@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downtime — The Antiquarians</title>
+  <link rel="stylesheet" href="../style.css">
+  <link id="player-css" rel="stylesheet" href="../player.css">
+  <script>if(localStorage.getItem('gm_mode')==='active'){document.getElementById('player-css').disabled=true;}</script>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="site-title">The Antiquarians</a>
+      <nav>
+        <a href="../party.html">Party</a>
+        <a href="../sessions.html">Sessions</a>
+        <a href="../story.html">Story</a>
+        <a href="../npcs.html">NPCs</a>
+        <a href="../world.html">World</a>
+        <a href="../tracker.html">My Sheet</a>
+        <a href="../gm/index.html" class="gm-only">GM</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><a href="index.html">GM Reference</a><span>›</span>Downtime</div>
+        <h1>Downtime</h1>
+        <p class="subtitle">The full sequence between scores — payoff, heat, entanglements, and what the crew does with the time they've bought.</p>
+      </div>
+
+      <div class="section">
+        <h2>The Downtime Sequence</h2>
+        <div class="arc-block">
+          <div class="block-label">Order of Operations</div>
+          <p>Run downtime in this order after each score: <strong>(1) Payoff</strong> — the crew collects coin. <strong>(2) Heat</strong> — heat is assessed and added. <strong>(3) Entanglements</strong> — roll for a consequence from the crew's heat and wanted level. <strong>(4) Downtime Activities</strong> — each character takes their free activities. This sequence is not optional. Do each step before moving to the next.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Step 1 — Payoff</h2>
+        <div class="arc-block">
+          <div class="block-label">Collecting Coin</div>
+          <p>The crew earns coin based on the score's target and tier. As a baseline: Tier 0 target = 2 coin, Tier 1 = 4 coin, Tier 2 = 6 coin, Tier 3 = 8 coin, Tier 4 = 10 coin. Adjust based on the specific score — a clean job with excellent execution on a high-value target should pay at the top of the range; a messy job on a secondary target should pay less. Coin is shared to the crew's stash first, then individual characters take their cut (usually 1–2 coin each depending on the crew's current wealth).</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Rep</div>
+          <p>The crew earns Rep equal to the target's tier, adjusted by the score's quality and impact. Rep fills a 12-segment track; when it fills, the crew advances one tier. Rep also decays if the crew avoids the spotlight — a crew that hasn't run a score in a while loses 1 Rep per downtime. Track Rep on the crew sheet.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Step 2 — Heat</h2>
+        <div class="arc-block">
+          <div class="block-label">Assessing Heat</div>
+          <p>After every score, assess the heat generated. Start at 0 and add for each factor that applies:</p>
+          <ul>
+            <li><strong>+0</strong> — Quiet score, no witnesses, no bodies.</li>
+            <li><strong>+1</strong> — Restricted area, or the score was unusual or notable.</li>
+            <li><strong>+1</strong> — Hostile territory (operating in a rival crew's turf).</li>
+            <li><strong>+1</strong> — Well-connected target (noble, ministry official, powerful faction).</li>
+            <li><strong>+1</strong> — Killing blow — a killing was committed during the score.</li>
+            <li><strong>+2</strong> — Killing a Bluecoat or official.</li>
+          </ul>
+          <p>Add the total to the crew's current heat. Heat is tracked on a 9-segment track. When heat hits 9 and must increase further, the crew's wanted level goes up by 1 instead and heat resets to 0.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Step 3 — Entanglements</h2>
+        <div class="arc-block">
+          <div class="block-label">The Entanglement Roll</div>
+          <p>Roll 1d6 and add the crew's wanted level. Consult the entanglement table. Entanglements are not optional — they represent the consequences of operating in a city that is watching. Even quiet crews eventually attract attention. Run the entanglement as a scene if it's interesting; handle it as narration if it's not. The point is that the world responds.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Entanglement Table (1d6 + Wanted Level)</div>
+          <ul>
+            <li><strong>2 or less — Neighborhood Watch.</strong> A local neighborhood group or merchants' association is upset about the crew's activities. They haven't gone to the Bluecoats yet — but they will. The crew should address this before it escalates.</li>
+            <li><strong>3 — Rivals.</strong> A rival crew makes a move — they claim turf, approach one of the crew's contacts, or send a pointed message. Decide what they want and who delivers the message.</li>
+            <li><strong>4 — Faction Trouble.</strong> A faction is displeased — an action the crew took has stepped on someone's interests. They send a representative. This is a conversation, not a fight, but it could become one if handled badly.</li>
+            <li><strong>5 — Bluecoats.</strong> The Watch comes calling. They don't have hard evidence, but they're asking questions. Someone connected to the crew is brought in for questioning, or the crew's safe house gets a very pointed visit.</li>
+            <li><strong>6 — Questioning.</strong> A crew member is picked up and questioned by the Bluecoats or Inspectors. They're not charged — yet — but they'll need to deal with this before the next score.</li>
+            <li><strong>7 — Reprisals.</strong> The crew's last target or a connected party strikes back. This is direct — property damage, an ambush, a threat delivered in person.</li>
+            <li><strong>8 — Demonic Notice.</strong> Something in the ghost field took notice of recent activities. An unusual ghost, an occult entity, or a Spirit Warden investigating an anomaly. Most relevant when the crew has been messing with rituals or the ghost field.</li>
+            <li><strong>9+ — Show of Force.</strong> The crew's wanted level is now a serious problem. Armed response — a genuine raid, not just a visit. This is a scene, not a narrative note.</li>
+          </ul>
+        </div>
+        <div class="info-block">
+          <p>Entanglements should be run as interesting complications, not as punishment. The Bluecoats showing up is a scene that can go many ways — bribery, a contact calling in a favor, a clever lie, a narrow escape. The entanglement creates the problem; the players solve it, and how they solve it tells you things about the crew.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Step 4 — Downtime Activities</h2>
+        <div class="arc-block">
+          <div class="block-label">How Many Actions</div>
+          <p>Each character gets <strong>2 downtime actions</strong> per score (some crew upgrades or special abilities grant more). They choose from the activities below. These represent the time between scores — the weeks or days where the crew isn't actively running a job. Don't roleplay every action in detail; describe the outcome, ask a brief question if it's interesting, and move on.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Acquire Asset</div>
+          <p>The character sources a specific item, service, or piece of information. Roll the relevant action (Consort, Sway, or Tinker depending on source). The result quality determines what they find. On a 6, they get exactly what they need. On a 4–5, they get it but with a complication — it costs more, has strings attached, or isn't quite right. On a 1–3, they don't get it, or they get something with a significant problem. The asset is temporary unless they spend coin to make it permanent.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Long-Term Project</div>
+          <p>The character works on something that requires sustained effort across multiple downtime periods. They roll the relevant action and tick a project clock (usually 8 segments) based on effect. When the clock fills, the project completes. Use for: developing a new contact, building a custom item, researching a ritual, establishing a safe house, cultivating a relationship with a faction. Long-term projects are how players invest in capabilities that aren't immediate.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Recover</div>
+          <p>The character receives treatment for their harm. Roll Constitution/Prowess (or a fortune roll if they have access to a physicker). Tick their healing clock by the result — on a 6, tick 3 segments; on a 4–5, tick 2; on a 1–3, tick 1. A skilled physicker or alchemist can add an extra tick. Level 1–2 harm uses a 4-segment clock; Level 3 uses a 6-segment clock. When the clock fills, the harm clears. A character who doesn't spend a downtime action recovering doesn't heal between scores.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Reduce Heat</div>
+          <p>The character works to reduce the crew's heat through bribery, misdirection, laying low, or spreading false rumors. Roll the relevant action (Consort, Sway, Command). On a 6, reduce heat by 3. On a 4–5, reduce by 2. On a 1–3, reduce by 1 and possibly generate a new complication. This activity is crucial for crews running frequently — without it, heat accumulates to the point where entanglements become show-of-force raids.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Train</div>
+          <p>The character earns 1 XP in a chosen attribute (Insight, Prowess, or Resolve). Simple — no roll required. A character who trains consistently will advance their attributes even without desperate rolls. Training is particularly useful when a player wants to develop a specific aspect of their character that the scores haven't naturally exercised.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">Indulge Vice</div>
+          <p>The character indulges their vice to clear stress. Roll the lowest action rating in their vice's relevant attribute — this is your "vice roll." Clear stress equal to the result. On a critical (two 6s), clear all stress. However: if you clear more stress than you have, the excess becomes overindulgence — a complication. The character may lose coin (gambling), be unavailable for the start of next score (excess), or create a social problem (lust, faith, obligation). Vice is a valve, but it has a cost when misused.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Running Downtime Well</h2>
+        <div class="arc-block">
+          <div class="block-label">Keep It Moving</div>
+          <p>Downtime is not a second session. It's a structured montage. Go around the table, each player announces their two actions, you resolve them quickly, describe what happens, move on. The entanglement is the main dramatic beat of downtime — give it the most time. If an activity roll is interesting (a complication on Acquire Asset, a setback on a long-term project), pause and explore it briefly. Otherwise, narrate the result and keep moving.</p>
+        </div>
+        <div class="arc-block">
+          <div class="block-label">The World Between Scores</div>
+          <p>Downtime is also when you advance faction clocks, describe what's changed in the city, and plant seeds for the next score. Before the players announce their activities, briefly narrate what's happening offscreen: a faction made a move, a contact sent word, something in the city shifted. This keeps the world feeling active and gives players information to act on during their downtime activities.</p>
+        </div>
+        <div class="info-block">
+          <p>The best downtime scenes are brief but textured. A one-sentence narration ("you find Mordis in the usual place — he has what you need, but he's nervous about something") plus a single interesting question ("does Harrow push him on it, or take the goods and go?") is more valuable than a full scene for every action. Save the full scene for when something goes wrong or when a player's action opens a door worth walking through.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="../gm.js"></script>
+</body>
+</html>
