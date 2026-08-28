@@ -115,6 +115,39 @@ main { padding: 2.5rem 2rem; }
   object-position: top center;
 }
 
+/* ── Large NPC Showcase (GM at-table reference — hold up to show players) ── */
+.npc-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 1rem 0 1.25rem;
+}
+.npc-showcase-item {
+  text-align: center;
+  width: 240px;
+  max-width: 100%;
+}
+.npc-showcase-item img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-raised);
+  display: block;
+}
+.npc-showcase-item .npc-name {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.npc-showcase-item .npc-role {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
 .breadcrumb {
   font-size: 0.76rem;
   color: var(--text-muted);

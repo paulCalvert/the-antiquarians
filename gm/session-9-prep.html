@@ -93,6 +93,13 @@
           <p><strong>Objective:</strong> reach the boiler valve before it's too late. <strong>Frame:</strong> genuinely winnable, not scripted-fixed — but even a full win gets revealed as false.</p>
           <p style="margin-top:0.5rem;"><strong>Setup:</strong> Flint as a child outside the Dalmorrian Boiler Works. Jared stumbles out drunk, ruffles his hair: <em>"There's my favorite little shadow. Your folks in there? Tell 'em Jared says the boiler's fine — I checked it myself."</em> Then shouting, smoke. His parents rush the boiler. He runs in after them.</p>
           <p style="margin-top:0.5rem;"><strong>Continuity dependency:</strong> assumes Flint has read the newspaper clipping (currently held by Harrow) before this dream — during the Session 9 opening roleplay.</p>
+          <div class="npc-showcase">
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/jared.png" alt="Jared" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Jared</div>
+              <div class="npc-role">Drunk, ruffles his hair, walks off</div>
+            </div>
+          </div>
         </div>
         <div class="secret-block">
           <div class="block-label">Mechanics</div>
@@ -113,26 +120,49 @@
         <h2>Dream 2 — Alaric: "The Founding"</h2>
         <div class="arc-block">
           <p><strong>Objective:</strong> complete the ritual successfully. <strong>Frame:</strong> a passenger in his ancestor's body at the founding of the Harbor Compact. No script fed to his player for his own lines.</p>
-          <p style="margin-top:0.5rem;"><strong>Beat order (restructured):</strong> Beat 0 chatter (free improv, other 5 houses in character) → Round 1 (holding his presence) → Beat 1 The Calling (fixed, together): <em>"We call upon the Watcher, by the authority of the Emperor, for the keeping of this city and the water that surrounds it."</em> → Beat 2 the other 5 houses' vows (fixed; his own vow deliberately withheld — the ceremony waits him out, other houses react in character to the pause) → Round 2 (the weight of being watched) → Beat 3 The Terms (fixed): <em>"...should any house's line fail, its portion falls to the five remaining, until none remain able to bear it."</em> → Beat 4 The Binding (fixed): <em>"Let this be witnessed. Let this be written. Let this be bound in water, which does not forget."</em> → Round 3 his blood offering, the climax → Beat 5 The Watcher's Answer (visibility gated by desync).</p>
+          <p style="margin-top:0.5rem;"><strong>Beat order (restructured):</strong> Beat 0 chatter (free improv, other 5 houses in character) → Round 1 (holding his presence) → Beat 1 The Calling (fixed, together): <em>"We call upon the Watcher, by the authority of the Emperor, for the keeping of this city and the water that surrounds it."</em> → Beat 2 the other 5 houses' vows (fixed; his own vow deliberately withheld — the ceremony waits him out, other houses react in character to the pause) → Round 2 (the weight of being watched) → Beat 3 The Terms (fixed, Blackstone presides — see personality note below): <em>"...should any house's line fail, its portion falls to the five remaining, until none remain able to bear it."</em> → Beat 4 The Binding (fixed): <em>"Let this be witnessed. Let this be written. Let this be bound in water, which does not forget."</em> → Round 3 his blood offering, the climax → Beat 5 The Watcher's Answer (visibility gated by desync).</p>
         </div>
+
         <div class="secret-block">
-          <div class="block-label">The Twist &amp; Mechanics</div>
-          <p>Each round needs one correct attribute (Insight/Prowess/Resolve — any skill under it counts). He doesn't know which. Wrong attribute doesn't fill "Hold the Face" regardless of dice.</p>
+          <div class="block-label">The Twist &amp; Mechanics — redesigned 2026-08-28</div>
+          <p>Each round has <strong>two independent secret checks</strong>, both graded together:</p>
           <ul style="margin:0.5rem 0 0 1.2rem; line-height:1.8;">
-            <li><strong>Round 1 correct: Insight</strong> (reading/blending). Tempting-wrong: Resolve (actively charming the room).</li>
-            <li><strong>Round 2 correct: Resolve</strong> (enduring by attuning). Tempting-wrong: Prowess (bracing like a fight).</li>
-            <li><strong>Round 3 correct: Resolve/Attune</strong> (surrender, not control). Tempting-wrong: Prowess/Finesse (a controlled gesture). Helper hint flavor: <em>"your blood is pounding right now."</em></li>
+            <li><strong>Check A — the attribute (dice).</strong> He picks Insight/Prowess/Resolve and rolls it. Correct guess = <strong>+1d</strong>. Wrong = <strong>−1d</strong> (0-or-below pool: roll 2, take lowest). 4-6 passes, 1-3 fails.</li>
+            <li><strong>Check B — "the what" (narrative, no dice).</strong> He just describes what his ancestor does or says. You privately judge it against that round's real correct action (below) — never revealed either way.</li>
           </ul>
-          <p style="margin-top:0.5rem;">Prowess is never correct, all three rounds — a real, discoverable pattern, don't lampshade it.</p>
-          <p style="margin-top:0.5rem;"><strong>Helpers:</strong> add a hint toward next round's correct attribute. <strong>Hinderers:</strong> lower his dots directly.</p>
-          <p style="margin-top:0.5rem;"><strong>Two clocks:</strong> "Hold the Face" (5 seg, good, correct rounds only, full=2/mixed=1/fail=0) vs "Not Supposed to Be Here" (6 seg, bad, flat +2 per wrong guess regardless of dice — the desync clock).</p>
+          <p style="margin-top:0.5rem;"><strong>Grading:</strong> both pass = clean, clock +0. One passes = mixed, +1. Neither = fail, +2. Single <strong>6-segment Desync clock</strong> (the old two-clock "Hold the Face" system is cut — it never actually fed the payoff).</p>
+          <p style="margin-top:0.5rem;"><strong>Round procedure, fixed order every round:</strong> (1) GM narrates that round's environmental clue, always, unconditionally — plus that round's optional house line if you're using it, delivered here as natural chatter, <em>not</em> as a rescue for a stuck player. (2) Card window — Helpers/Hinderers play, Showdowns resolve. (3) Alaric declares — attribute + what he does/says, together, before rolling. (4) Roll &amp; resolve.</p>
         </div>
+
         <div class="secret-block">
-          <div class="block-label">Payoff (by wrong-guess count)</div>
-          <p><strong>0 wrong:</strong> full ceremony witnessed, lingering physical sensation carries into the finale (pressure/salt/ringing ears). <strong>1 wrong:</strong> minor haze, a few details unrecoverable. <strong>2 wrong:</strong> significant haze, retains the gist only. <strong>3 wrong (full desync):</strong> Beat 5 is a blank — he was there and can't say how it ended. Play this as a real gap in memory, not just "missed intel."</p>
+          <div class="block-label">Round-by-Round Answers</div>
+          <ul style="margin:0; line-height:1.9;">
+            <li><strong>Round 1 — attribute: Insight</strong> (reading/blending, tempting-wrong Resolve/actively charming). <strong>What: mirrors/echoes</strong> another house rather than originating — fails if he says/does something of his own. Env. clue: the other five are already moving in synced cadence. Optional nudge: Strangford — <em>"nodding and saying 'yep' goes a long way."</em></li>
+            <li><strong>Round 2 — attribute: Resolve</strong> (enduring by attuning, tempting-wrong Prowess/bracing like a fight). <strong>What: silent</strong> — no words at all, just physical reaction. Fails if he tries to speak. <strong>The trap:</strong> he's just watched all five other houses commit something out loud, so the obvious (wrong) read is "my turn too." Env. clue: callback to Beat 2 — none of the other five stiffened when it was their turn to be watched. Optional nudge: Ilvern — <em>"take your time, dear — if you want a moment, we will give it to you."</em></li>
+            <li><strong>Round 3 (climax) — attribute: Resolve/Attune</strong> (surrender not control, tempting-wrong Prowess/Finesse). <strong>What: gives the blood oath</strong> — actually attempts to speak, raw/unfinished is fine. Fails if he stays silent or refuses. Mirror image of Round 2. Env. clue: his own pulse already rising unbidden. Optional nudge: Redgrave, right as the round opens — <em>"what is his obligation costing him?"</em> Attribute hint card stays feeling-only (pulse/instinct); the Behavior hint card is the one that explicitly names blood as the content.</li>
+          </ul>
+          <p style="margin-top:0.5rem;">Prowess is never correct, all three rounds — a real, discoverable pattern, don't lampshade it. <strong>Helpers:</strong> add a hint (Attribute card → Check A, Behavior card → Check B). <strong>Hinderers:</strong> lower his dots directly, stacks with the −1d penalty.</p>
+        </div>
+
+        <div class="secret-block">
+          <div class="block-label">House Personality &amp; Staging Notes — updated 2026-08-28</div>
+          <ul style="margin:0; line-height:1.9;">
+            <li><strong>Blackstone is NOT reverent</strong> — unsentimental, exacting, treats wardcraft as an engineering problem ("the math holds"). Delivers Beat 3 precise and unhurried, like reading a spec, not a sermon.</li>
+            <li><strong>Ilvern carries the reverence for the arcane instead</strong> — calls everyone "dear," long-limbed, repeated phrase "the water always knows." (GM-only: this mannerism echoes down to a descendant, Lady Crane — don't surface it.)</li>
+            <li><strong>Strangford's Beat 0 line</strong> affirms Ilvern ("there are older, bigger things at stake"), not Blackstone — and needles Redgrave about the leviathan trade, not Wrenfield.</li>
+            <li><strong>The incidents thread:</strong> Redgrave raises rising trouble in the bay at Beat 0 ("lost two more hulls past the breakwater"); Ilvern answers vague and quiet ("once this is done, I won't have to worry about that anymore") — quiet foreshadow of Beat 3's "horrors of the deep," don't explain it.</li>
+            <li><strong>Wrenfield no longer holds City</strong> — that assignment is cut. City rotates normally like every other dream; nobody's tied to it here.</li>
+            <li><strong>The Beat 2 "hesitation" reactions are reflavored</strong> — not Alaric being indecisive (he's making an active, informed choice, not stalling). Each house's line is optional color for a quiet moment before Round 3, not a reaction to him being stuck.</li>
+          </ul>
+        </div>
+
+        <div class="secret-block">
+          <div class="block-label">Beat 5 — The Watcher's Answer, and Payoff by Clock Fill</div>
+          <p>Full sequence: held silence (room inhales) → pressure builds, ears want to pop → sharp cold, breath visible → salt thickens → distant roar, felt more than heard → briefly underwater, light bent, no one drowning → breaks, air normal, roar fades → a last fading sense of being <em>seen</em>, then it looks away.</p>
+          <p style="margin-top:0.5rem;"><strong>0-1 filled:</strong> all of it, vivid — the lingering unexplained sensation he carries into the finale. <strong>2-3:</strong> all beats happen, a couple specifics smear. <strong>4-5:</strong> fragments only — cold for sure, roar maybe, underwater is just "couldn't breathe right for a second." <strong>6 (full desync):</strong> it just cuts — silence, then nothing, until everyone's looking at him and it's over. Play this as a real gap in memory, not just "missed intel."</p>
         </div>
         <div class="info-block">
-          <p><strong>Timer runs out:</strong> simply cut off, unfinished — never learns how it ends. Silence, not haze — a distinct outcome from the desync tiers.</p>
+          <p><strong>Timer runs out:</strong> simply cut off, unfinished — never learns how it ends. Silence, not haze — a distinct outcome from the clock-fill tiers.</p>
         </div>
       </div>
 
@@ -140,16 +170,24 @@
       <div class="section" id="dream-3-brick">
         <h2>Dream 3 — Brick: "The Replacement"</h2>
         <div class="secret-block">
-          <div class="block-label">⚠ Pre-Session Prep Required</div>
-          <p>Get Brick's player to commit to <strong>exactly 4 distinct identity/memory pieces</strong> before tonight (marital status, a sibling, personal history, a name he'd answer to). Each becomes one physical red card. This dream can't run without that conversation happening first.</p>
+          <div class="block-label">Pre-Session Prep — DONE 2026-08-27</div>
+          <p>Brick's player's 4 real pieces are in: (1) <strong>Family</strong> — never had someone serious, "easier that way." (2) <strong>Sibling</strong> — Josie, opposite temperament, outgoing/friendly, missing for years, rumored drowned in a canal. (3) <strong>Personal history</strong> — a childhood fight over a scrap of food, blindly swung a brick into the other kid's head to escape, first heard the spirit bells that moment, secretly hates his own street name because of it. (4) <strong>A name</strong> — "Ori," what only family called him.</p>
         </div>
         <div class="arc-block">
           <p><strong>Objective:</strong> remember who you are — not his fight, everyone else's. <strong>Frame:</strong> zero agency, no dice, no choices. He suits up, drops endlessly. The Watcher: <em>"I have watched so long. I would like, once, to be watched back. Stay. I will show you everything, if you let me see you the same way."</em></p>
+          <div class="npc-showcase">
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/the-watcher.png" alt="The Watcher" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">The Watcher</div>
+              <div class="npc-role">Gentle, ancient, sincere — never menacing</div>
+            </div>
+          </div>
         </div>
         <div class="secret-block">
           <div class="block-label">Mechanics — The Deck</div>
           <p>Pool: 4 red (his memories) + 4 black added at the <em>start</em> of each round, cumulative, reshuffled fresh each round. Round-end: the Watcher asks <em>"Who are you?"</em> — draw once. Red = "I am Brick" (holds). Black = "I don't know" (fails). Odds: R1 ≈50%, R2 ≈33%, R3 =25% (worse if reds removed).</p>
           <p style="margin-top:0.5rem;"><strong>Helpers:</strong> grant advantage (draw 2, succeed on either red). <strong>Hinderers:</strong> permanently remove a red card — gone for the rest of the dream.</p>
+          <p style="margin-top:0.5rem;"><strong>Narration layer (print handout: <code>session9_brick_memory_cards.html</code>):</strong> the physical pool deck stays plain red/black card stock (blind draw, no text). A separate cut-card set gives the narration to read once a color is drawn — three piles: <strong>Brick</strong> (his 4 real memories, read on a red hold), <strong>Diver</strong> (Corwin Vale's 4 blur memories, read on the first 4 black draws), <strong>Abyss</strong> (generic monster flavor, reused after Diver runs out). Diver Card 2 (a boy on a dock, a crab dropped in the water) is deliberately built to echo Josie — deliver it as a live flicker ("Your sister — no. A brother.") before continuing, don't smooth it over.</p>
         </div>
         <div class="secret-block">
           <div class="block-label">Payoff (by total failures, 0-3)</div>
@@ -170,6 +208,13 @@
         <div class="arc-block">
           <p><strong>Objective:</strong> follow the Conductor through the train, get him talking. <strong>Frame:</strong> not fixed history — a live conversation with the city-spirit's active agent; genuinely carries into the finale.</p>
           <p style="margin-top:0.5rem;"><strong>Setup:</strong> <em>"The train cannot stop. The city cannot stop. Not on my match."</em> Play the Conductor procedural, not mystical — catastrophe is administrative to him.</p>
+          <div class="npc-showcase">
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/the-conductor.png" alt="The Conductor" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">The Conductor</div>
+              <div class="npc-role">The city-spirit's active agent</div>
+            </div>
+          </div>
         </div>
         <div class="secret-block">
           <div class="block-label">Mechanics &amp; Structure</div>
@@ -195,6 +240,13 @@
         <div class="arc-block">
           <p><strong>Objective:</strong> get out of the room of cultists. <strong>Frame:</strong> a trap dream. Escape is technically possible, but the space lies about its own geometry. Horror is politeness that won't stop, and an offer that isn't even a lie.</p>
           <p style="margin-top:0.5rem;"><strong>Setup:</strong> handler, warm: <em>"Great work on the last task, Harrow. Same time next week."</em> He turns to leave — the exit is gone, someone unrecognized stands there: <em>"Hey Harrow! Where are you going?"</em> Setarra, present but not yet acting.</p>
+          <div class="npc-showcase">
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/setarra.png" alt="Setarra" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Setarra</div>
+              <div class="npc-role">Present, watching — not yet acting</div>
+            </div>
+          </div>
         </div>
         <div class="secret-block">
           <div class="block-label">The Twist &amp; Mechanics</div>
@@ -204,8 +256,32 @@
         </div>
         <div class="secret-block">
           <div class="block-label">The Lingering Trap &amp; the Morrow Tell</div>
-          <p><strong>Standing temptation, any time, not tied to rounds:</strong> a menu of half-recognized faces he can try to place — always costs +1 (or a ladder jump), never resolves cleanly. <strong>Nell Vask</strong> (real contact, scars/dry humor). <strong>Pale Jeren</strong> (real contact, dust-rubbing). <strong>The Handless Clerk</strong> (punishes instead — shifts/vanishes mid-look). <strong>Veleris Quill</strong> (never met, feels like he should recognize her anyway — most unsettling). Never resolve whether it's his memory failing or something changed.</p>
+          <p><strong>Standing temptation, any time, not tied to rounds:</strong> a menu of half-recognized faces he can try to place — always costs +1 (or a ladder jump), never resolves cleanly. <strong>Nell Vask</strong> (real contact, scars/dry humor). <strong>Pale Jeren</strong> (real contact, dust-rubbing). <strong>The Handless Clerk</strong> (punishes instead — shifts/vanishes mid-look). <strong>Veleris Quill</strong> (never met, feels like he should recognize her anyway — most unsettling, no portrait — she's meant to be a stranger). Never resolve whether it's his memory failing or something changed.</p>
+          <div class="npc-showcase">
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/nell-vask.png" alt="Nell Vask" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Nell Vask</div>
+              <div class="npc-role">Real contact — scars, dry humor</div>
+            </div>
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/pale-jeren.png" alt="Pale Jeren" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Pale Jeren</div>
+              <div class="npc-role">Real contact — dust-rubbing</div>
+            </div>
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/the-handless-clerk.png" alt="The Handless Clerk" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">The Handless Clerk</div>
+              <div class="npc-role">Punishes the look — shifts, vanishes</div>
+            </div>
+          </div>
           <p style="margin-top:0.5rem;"><strong>Morrow tell — separate, GM's timing, ideally mid-loop:</strong> total instant recognition, opposite texture. Brother Morrow, who never smiles, smiling. <em>"You always did such careful work, Harrow. We kept a place for you. We still do."</em> No threat in it — that's what makes it worse.</p>
+          <div class="npc-showcase">
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/brother-morrow.png" alt="Brother Morrow" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Brother Morrow</div>
+              <div class="npc-role">Never smiles — except here</div>
+            </div>
+          </div>
         </div>
         <div class="secret-block">
           <div class="block-label">Payoff</div>
@@ -219,9 +295,20 @@
       <!-- ==================== DREAM 6: VICTOR ==================== -->
       <div class="section" id="dream-6-victor">
         <h2>Dream 6 — Victor: "The Circuit"</h2>
+        <div class="secret-block">
+          <div class="block-label">⚠ This section is stale — flagging, not fixed here</div>
+          <p>The mechanics/reveals below still describe the old ghost-current/gondola design. Victor's dream was fully rebuilt on 2026-08-27 — Dirmot is now physically present and non-hostile, the objective is "keep the tower from falling" via a real tangram/silhouette block puzzle layered on the card-pool mechanic, and the payoff banks a 0-3 tower-stability value for the finale. Full current version lives locally in <code>session9_victor_dream.md</code> and its print pair — worth a full sync pass here like Alaric's got, just not done as part of this update.</p>
+        </div>
         <div class="arc-block">
           <p><strong>Objective:</strong> determine "The Pattern." <strong>Frame:</strong> no dice, no agency — inverted from Brick's. Fell asleep studying Dirmot's ley-line papers; the dream lets him walk the lines instead of just reading them, carried by a current he didn't choose.</p>
           <p style="margin-top:0.5rem;"><strong>The physical prop:</strong> a hidden ley-line map drawn on paper, covering a real map of Doskvol. Players never told what it represents ahead of time. Each successful round physically reveals a section. The table may piece it together faster than Victor's player does — that's fine, the goal is for the character to figure it out.</p>
+          <div class="npc-showcase">
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/dirmot.png" alt="Dirmot" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Dirmot</div>
+              <div class="npc-role">Physically present in the rebuilt dream, non-hostile</div>
+            </div>
+          </div>
         </div>
         <div class="secret-block">
           <div class="block-label">Mechanics — The Deck (inverted from Brick's)</div>
@@ -255,6 +342,27 @@
       <!-- ==================== THE BARGAIN ==================== -->
       <div class="section">
         <h2>The Bargain — Beats 4-8</h2>
+
+        <div class="info-block">
+          <p style="margin-bottom:0.6rem;"><strong>Cast of the ritual — hold this up before Beat 4 so the table has faces to attach to names as the scene unfolds:</strong></p>
+          <div class="npc-showcase">
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/scurlock.png" alt="Lord Scurlock" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Lord Scurlock</div>
+              <div class="npc-role">Beats 4-8 — hands everything over</div>
+            </div>
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/setarra.png" alt="Setarra" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Setarra</div>
+              <div class="npc-role">Present throughout Beats 4-12</div>
+            </div>
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/harker.png" alt="Harker" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Harker</div>
+              <div class="npc-role">Arrives Beat 10</div>
+            </div>
+          </div>
+        </div>
 
         <div class="arc-block">
           <div class="block-label">Beat 4 — The Summons</div>
@@ -296,6 +404,28 @@
         <h2>The Room Fills — Beat 9</h2>
         <div class="arc-block">
           <p>Ash Compact attendants flood in — some recognizable from Harrow's dream sequence this session. They block the party from ready access to whatever follows.</p>
+          <div class="npc-showcase">
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/nell-vask.png" alt="Nell Vask" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Nell Vask</div>
+              <div class="npc-role">From Harrow's dream</div>
+            </div>
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/pale-jeren.png" alt="Pale Jeren" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Pale Jeren</div>
+              <div class="npc-role">From Harrow's dream</div>
+            </div>
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/the-handless-clerk.png" alt="The Handless Clerk" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">The Handless Clerk</div>
+              <div class="npc-role">From Harrow's dream</div>
+            </div>
+            <div class="npc-showcase-item">
+              <img src="../img/npcs/brother-morrow.png" alt="Brother Morrow" onerror="this.closest('.npc-showcase-item').style.display='none'">
+              <div class="npc-name">Brother Morrow</div>
+              <div class="npc-role">From Harrow's dream</div>
+            </div>
+          </div>
         </div>
         <div class="secret-block">
           <div class="block-label">Counter-play — If the crew fights the cultists</div>
