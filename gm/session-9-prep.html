@@ -249,14 +249,20 @@
           </div>
         </div>
         <div class="secret-block">
-          <div class="block-label">The Twist &amp; Mechanics</div>
-          <p><strong>Bad clock — "The Circle Closes," 6 seg.</strong> Even a full success still ticks it (+1) — the better he does, the more the room reads him as belonging, not escaping. Scaling: full=+1, mixed=+2, fail=+3, crit maybe +0.</p>
-          <p style="margin-top:0.5rem;"><strong>Helpers:</strong> create an opportunity (−1 clock fill). <strong>Hinderers:</strong> remove 1 dot directly. (Reversed split from Flint/Costya on purpose.)</p>
-          <p style="margin-top:0.5rem;"><strong>Statue ladder</strong> (cultists move only when unwatched, tied to clock segments): 0-1 background/still. 2-3 close distance when unwatched, still freeze when watched. 4-5 move even under watch, still snap back. 6: no longer freeze at all, walking/crawling, closing in.</p>
+          <div class="block-label">The Twist &amp; Mechanics — rebuilt 2026-08-28, replaces the old "Circle Closes" clock</div>
+          <p>A concrete 3-room escape ladder instead of an abstract clock: <strong>Room 1 — The Closet</strong> (low threat, the bureaucratic space from Setup) → <strong>Room 2 — The Break Room</strong> (medium, 3-4 cultists, natural spot for the Lingering Trap) → <strong>Room 3 — The Chapel</strong> (high threat, Morrow preaching to 20+ — this is where the Morrow Tell now fires, anchored here rather than an arbitrary mid-loop moment).</p>
+          <p style="margin-top:0.5rem;"><strong>Clearing Room 3 is the dream's designed conclusion — always ends in Setarra's catch regardless of performance,</strong> texture set by final damage (see Payoff). This isn't a branch to avoid by playing well.</p>
+          <p style="margin-top:0.5rem;"><strong>Progress</strong> starts Room 1: fail = no move. Mixed = +1 room, but −1d next round (compromised position); +1 bonus Threat too if won aggressively (GM's call). Full = +1 room. Crit (2+ sixes) = +2 rooms, skips one. Hard-capped at Room 6 — only reachable via crits on all 3 rounds, astronomically rare.</p>
+          <p style="margin-top:0.5rem;"><strong>Threat = current Room + current Round, recalculated fresh each round — no separate clock.</strong> The same escape roll's raw die also resists that Threat as damage: <code>max(0, Threat − roll)</code>. A crit always fully resists (0 damage) regardless of the math. Damage accumulates toward <strong>4 points</strong> — hitting 4 wakes him immediately, covered in dusty handprints, cutting the dream short right there.</p>
+          <p style="margin-top:0.5rem;"><strong>Helpers:</strong> create an opportunity — <strong>+1d</strong> that round. <strong>Hinderers:</strong> remove 1 dot directly, no card. (Reversed split from Flint/Costya on purpose.)</p>
+          <p style="margin-top:0.5rem;"><strong>Escalation ladder</strong> now ties to ROUND, not room or threat — reads the same whether he's flying through or stuck in Room 1: R1 mask intact, background dressing. R2 (any room) everyone freezes mid-motion, wide fixed smiles, shuffling behind him, hands lightly brush without gripping. R3 the mask breaks — open pursuit in the same frozen-statue motion.</p>
+          <div class="note-box gm" style="margin-top:0.5rem; border:1px solid #999; padding:0.6rem; font-size:0.85rem;">
+            <strong>Rooms 4-6 (astronomically rare, stacked crits only):</strong> if crits push him past Room 3 while rounds remain, extend rather than cut short. Tonal shift to communicate: Rooms 1-3 are Setarra's actual construction; 4-6 are Harrow breaking past what she built — not a win over her (she still has reach into the streets, the crew, his own identity), but a real crack in her control of this specific space. <strong>4 — Doskvol Streets:</strong> cultists pour out of doorways after him. <strong>5 — The Pawn Shop Hideout:</strong> he runs for safe ground, the crew itself turns with the same crazed smile and gives chase. <strong>6 — His Own Bedroom:</strong> he's already there, asleep; the sleeping self turns and smiles. No extra roll to trigger — just narrate it once the math lands there (only possible exactly at Round 3's end). Threat there is 9 — even a plain 6 still takes 3 damage; only a resist crit avoids it entirely.
+          </div>
         </div>
         <div class="secret-block">
           <div class="block-label">The Lingering Trap &amp; the Morrow Tell</div>
-          <p><strong>Standing temptation, any time, not tied to rounds:</strong> a menu of half-recognized faces he can try to place — always costs +1 (or a ladder jump), never resolves cleanly. <strong>Nell Vask</strong> (real contact, scars/dry humor). <strong>Pale Jeren</strong> (real contact, dust-rubbing). <strong>The Handless Clerk</strong> (punishes instead — shifts/vanishes mid-look). <strong>Veleris Quill</strong> (never met, feels like he should recognize her anyway — most unsettling, no portrait — she's meant to be a stranger). Never resolve whether it's his memory failing or something changed.</p>
+          <p><strong>Standing temptation, any time, not tied to rounds:</strong> a menu of half-recognized faces he can try to place — always costs +1 bonus Threat, never resolves cleanly. <strong>Nell Vask</strong> (real contact, scars/dry humor). <strong>Pale Jeren</strong> (real contact, dust-rubbing). <strong>The Handless Clerk</strong> (punishes instead — shifts/vanishes mid-look). <strong>Veleris Quill</strong> (never met, feels like he should recognize her anyway — most unsettling, no portrait — she's meant to be a stranger). Never resolve whether it's his memory failing or something changed.</p>
           <div class="npc-showcase">
             <div class="npc-showcase-item">
               <img src="../img/npcs/nell-vask.png" alt="Nell Vask" onerror="this.closest('.npc-showcase-item').style.display='none'">
@@ -274,7 +280,7 @@
               <div class="npc-role">Punishes the look — shifts, vanishes</div>
             </div>
           </div>
-          <p style="margin-top:0.5rem;"><strong>Morrow tell — separate, GM's timing, ideally mid-loop:</strong> total instant recognition, opposite texture. Brother Morrow, who never smiles, smiling. <em>"You always did such careful work, Harrow. We kept a place for you. We still do."</em> No threat in it — that's what makes it worse.</p>
+          <p style="margin-top:0.5rem;"><strong>Morrow tell — fires when he reaches Room 3, the Chapel:</strong> total instant recognition, opposite texture from the lingering trap. Brother Morrow, who never smiles, smiling — mid-sermon, at the pulpit. <em>"You always did such careful work, Harrow. We kept a place for you. We still do."</em> No threat in it — that's what makes it worse.</p>
           <div class="npc-showcase">
             <div class="npc-showcase-item">
               <img src="../img/npcs/brother-morrow.png" alt="Brother Morrow" onerror="this.closest('.npc-showcase-item').style.display='none'">
@@ -284,11 +290,13 @@
           </div>
         </div>
         <div class="secret-block">
-          <div class="block-label">Payoff</div>
-          <p><strong>6:</strong> hands finish closing, wakes calm, dust on collar. <strong>3-5:</strong> free but rattled, Morrow's smile lingers unexplained. <strong>0-2:</strong> clean break, then Setarra's voice, close and fond (live improv off the player's reaction) — unsettles more than a threat would.</p>
+          <div class="block-label">Payoff — by final room reached and total damage</div>
+          <p><strong>Never reaches Room 3</strong> (stuck, or hits 4 damage first): trapped. Wakes calm — worse than screaming. Dust on his collar, still there when he opens his eyes.</p>
+          <p style="margin-top:0.5rem;"><strong>Reaches Room 3 — always Setarra's catch, severity set by final damage:</strong> 0-1 damage = caught gently, her voice close and fond not threatening, barely marked. Morrow's wrong smile is the only thing that lingers, unexplained until he meets him for real later. 2-3 damage = caught and rattled, real visible cost. 4 damage = full bad ending anyway, dusty handprints — the chapel was never really an exit.</p>
+          <p style="margin-top:0.5rem;"><strong>Reaches Room 4+:</strong> a genuine break from this specific trap — same damage scale applies, but frame the escape itself as real. Setarra's wider reach (streets/crew/his own identity) means it's not safety from her generally, just from this dream.</p>
         </div>
         <div class="info-block">
-          <p><strong>Timer runs out:</strong> binary on trajectory. Still stuck → simply trapped. Trending toward success → believes he escaped, then hands on his back: <em>"You REALLY thought you could get away?"</em> — ends there.</p>
+          <p><strong>Timer runs out:</strong> hasn't reached Room 3 yet → simply trapped, same as the 4-damage ending. Already resolved before cutoff → score normally per Payoff above.</p>
         </div>
       </div>
 
