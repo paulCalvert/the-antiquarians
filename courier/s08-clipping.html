@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Doskvol Courier — Front Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #d0c8b8;
+      font-family: 'IM Fell English', Georgia, serif;
+      color: #1a1008;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 14in;
+      margin: 0.25in auto;
+      background: #f5edd8;
+      padding: 0.28in 0.42in 0.35in 0.42in;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+      position: relative;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      text-align: center;
+      border-top: 3px double #1a1008;
+      border-bottom: 3px double #1a1008;
+      padding: 0.05in 0;
+      margin-bottom: 0.04in;
+    }
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 8pt;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.04in;
+      font-style: italic;
+    }
+    .masthead-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 52pt;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .masthead-sub {
+      font-size: 8.5pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 0.02in;
+      font-style: italic;
+    }
+
+    /* ── SECTION RULES ── */
+    .rule { border: none; border-top: 1px solid #1a1008; margin: 0.04in 0; }
+    .rule-thick { border: none; border-top: 2px solid #1a1008; margin: 0.05in 0; }
+    .rule-double { border: none; border-top: 3px double #1a1008; margin: 0.05in 0; }
+
+    /* ── HEADLINES ── */
+    .main-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 44pt;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0.05in 0 0.03in 0;
+    }
+    .main-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 10pt;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+    .secondary-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 17pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.02in;
+    }
+    .secondary-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9pt;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+
+    /* ── FIRE IMAGE — FULL WIDTH ── */
+    .fire-image-block {
+      width: 100%;
+      height: 2.6in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border-top: 1px solid #1a1008;
+      border-bottom: 1px solid #1a1008;
+    }
+    .fire-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+      filter: grayscale(100%) contrast(1.15);
+    }
+
+    /* ── TWO-COLUMN MAIN STORY TEXT ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 0.2in;
+      margin-bottom: 0.05in;
+    }
+    .two-col-left {
+      border-right: 1px solid #1a1008;
+      padding-right: 0.18in;
+    }
+
+    /* ── BODY TEXT ── */
+    p {
+      font-size: 9pt;
+      line-height: 1.45;
+      text-align: justify;
+      hyphens: auto;
+      margin-bottom: 0.05in;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* Drop cap */
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 34pt;
+      font-weight: 700;
+      float: left;
+      line-height: 0.78;
+      margin: 0.03in 0.05in 0 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-top: 2px solid #1a1008;
+      border-bottom: 2px solid #1a1008;
+      padding: 0.05in 0.05in;
+      margin: 0.06in 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9.5pt;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    /* ── CAPTION ── */
+    .caption {
+      font-size: 7pt;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.02in;
+      line-height: 1.3;
+      margin-bottom: 0.06in;
+    }
+
+    /* ── SECONDARY STORY ── */
+    .secondary-story {
+      display: grid;
+      grid-template-columns: 2.8in 1fr;
+      gap: 0 0.16in;
+      padding-top: 0.05in;
+    }
+    .secondary-col-img {
+      padding-right: 0.14in;
+      border-right: 1px solid #1a1008;
+    }
+    .secondary-col-img .image-block {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+    }
+    .secondary-col-img .image-block img {
+      width: 115%;
+      margin-left: -7.5%;
+      display: block;
+      filter: grayscale(100%) contrast(1.1);
+    }
+
+    /* ── COLUMN BYLINE ── */
+    .byline {
+      font-size: 7.5pt;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 0.04in;
+      display: block;
+    }
+
+    /* ── PRINT STYLES ── */
+    @media print {
+      body { background: none; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        padding: 0.25in 0.38in;
+      }
+      @page { size: 8.5in 14in; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <div class="masthead-top">
+        <span>Vol. XLII &nbsp;&bull;&nbsp; No. 118</span>
+        <span>17th Ashmonth, Year 847 A.C.</span>
+        <span>One Copper Bit</span>
+      </div>
+      <div class="masthead-name">The Doskvol Courier</div>
+      <div class="masthead-sub">All the News from Doskvol to the Deathlands</div>
+    </div>
+
+    <!-- MAIN HEADLINE -->
+    <div class="main-headline">Fire! Negligence Breeds Flames!</div>
+    <div class="main-deck">Two Workers Dead at Dalmorrian Boiler Works &mdash; Heir Reportedly at Leisure While Charhollow Burned &mdash; House Dalmorrian Refuses Comment</div>
+    <hr class="rule-thick">
+
+    <!-- FULL-WIDTH FIRE IMAGE -->
+    <div class="fire-image-block">
+      <img src="img/S08_fire.png" alt="The Dalmorrian Boiler Works fire">
+    </div>
+    <p class="caption"><em>The Dalmorrian Boiler Works, Copperglass Lane, Charhollow, as seen in the hours following the explosion. Two workers perished. The facility is a total loss.</em></p>
+
+    <!-- TWO-COLUMN TEXT -->
+    <div class="two-col">
+
+      <!-- LEFT COLUMN -->
+      <div class="two-col-left">
+        <span class="byline">From Our Charhollow Correspondent</span>
+        <p class="drop-cap">In the early hours of the 14th, flames consumed the eastern wing of the Dalmorrian Boiler Works on Copperglass Lane, Charhollow, claiming the lives of two workers and reducing the district&rsquo;s newest processing facility to a smoldering shell. Ministry of Preservation inspectors arrived at dawn to find the primary boiler chamber collapsed and the surrounding block still warm with residual heat.</p>
+        <p>The cause remains unknown. What has confounded inspectors is that the primary boiler &mdash; a Voss-pattern pressure vessel, recently installed &mdash; was not old equipment. It was, by all accounts, nearly new. A failure of this kind in machinery of this age is without precedent in the Ministry&rsquo;s incident records. One detail has been noted in the preliminary report: an unusual accumulation of fine particulate matter was found within the boiler&rsquo;s internal components. The substance has been described as ancient-seeming dust &mdash; mineral, dark, with no obvious source. Inspectors have declined to characterize its significance. It is, however, considered strange.</p>
+        <p>The workers who died are identified as Cobb Barrow, age 38, a boiler tender employed at the Works for four years, and Maren Barrow, age 35, who worked the adjacent processing station. They are understood to have been husband and wife. Both were found near the primary boiler housing. Inspectors indicate they likely had no warning before the failure. The Barrows are survived by a son. The Bluecoats have been unable to locate him.</p>
+        <div class="pull-quote">&ldquo;Two workers are dead in Charhollow, and the man whose name appears on the charter spent that evening in a tavern.&rdquo;</div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="two-col-right">
+        <p>More damning still is the question of where the facility&rsquo;s responsible heir was when the boiler gave way. Noble management &mdash; or their designated representative &mdash; is legally required to be present at any active industrial site, not as a courtesy but as a condition of operation. In the event of a developing emergency, only the attending overseer may authorize access to sealed equipment, direct workers to evacuate, or summon the Bucket Brigade. Workers who take any of these actions without noble authorization do so at their own legal peril, risking charges of presumptuous conduct and contractual breach. The law, in short, requires that someone with a name be present. On the night of the 14th, no one with a name was there.</p>
+        <p>Jared Dalmorrian, heir to House Dalmorrian and the named overseer of the Works, was instead at the Ironbell Tavern in Crow&rsquo;s Foot, where multiple credible witnesses place him for the better part of the evening. He was collected by household staff and removed from public view before dawn. When the boiler failed, the workers of the Dalmorrian Works had no legal path to save themselves, and no one in authority to save them.</p>
+        <p>Councillor Ardren Voss issued a statement pledging to &ldquo;personally see to it that our city&rsquo;s laborers are protected by policies that serve their interests, not the convenience of absentee operators.&rdquo; The labor unions expressed uniform skepticism. &ldquo;We have heard this before,&rdquo; said one representative. &ldquo;We will believe it when we see it in writing and signed.&rdquo;</p>
+        <p>House Dalmorrian has issued no formal statement. Jared Dalmorrian has not been seen publicly since the evening of the 14th. The Ministry of Preservation has opened a formal inquest.</p>
+        <hr class="rule" style="margin: 0.09in 0;">
+        <p style="font-family:'Playfair Display',Georgia,serif; font-size:7pt; font-weight:700; font-style:italic; text-transform:uppercase; letter-spacing:0.05em;">A Note on Old Houses and New Burdens</p>
+        <p>Two workers are dead in Charhollow &mdash; a husband and wife, leaving behind a son whose whereabouts remain unknown &mdash; and the man whose name appears on the Boiler Works charter spent that evening drinking across the city while they burned. Those who have long questioned whether old names constitute a qualification for the stewardship of workers&rsquo; lives will find fresh and terrible material in the ashes of Copperglass Lane. The families of the dead deserve answers that &ldquo;internal review&rdquo; cannot provide.</p>
+        <p>We will be watching.</p>
+      </div>
+    </div>
+
+    <hr class="rule-double">
+
+    <!-- SECONDARY STORY -->
+    <div class="secondary-story">
+
+      <!-- IMAGE COLUMN -->
+      <div class="secondary-col-img">
+        <div class="image-block">
+          <img src="img/S08_ghosttrain.png" alt="Ghost train sighting on the Fifth Line">
+        </div>
+        <p class="caption"><em>An artist&rsquo;s rendering of the reported disturbance on the Fifth Line, based on witness descriptions. The Spirit Wardens decline to comment.</em></p>
+      </div>
+
+      <!-- TEXT COLUMN -->
+      <div class="secondary-col-text">
+        <div class="secondary-headline">A Ghost Train on the Fifth Line?</div>
+        <div class="secondary-deck">Our Correspondent Walks the Rails &mdash; Workers Speak, Wardens Deny, the Truth Remains Elusive</div>
+        <span class="byline">By Our Rail District Correspondent</span>
+        <p class="drop-cap">The Fifth Line has not carried a passenger in more than sixty years. Its stations are derelict. Its tracks unmaintained. There is no schedule, no service, no crew. And yet residents across five districts have reported, independently and without apparent coordination, a locomotive running the old route in the pre-dawn hours &mdash; dark, silent, and fast. &ldquo;It wasn&rsquo;t loud,&rdquo; said a woman in Silkshore who watched from her window. &ldquo;Trains are loud. That&rsquo;s what I remember.&rdquo; A Bluecoat in Charhollow filed an incident report. He was told to file it elsewhere.</p>
+        <p>A Rail Jack at Gaddoc Station confirmed that nothing operating out of Gaddoc runs those tracks. A lecturer in rail engineering at Charterhall University was blunter: sixty years of unmaintained track cannot be run at speed. &ldquo;Whatever these people saw,&rdquo; he wrote, &ldquo;it was not a functioning train.&rdquo; He offered no alternative explanation. The Spirit Wardens declined to comment. The Ministry of Preservation referred us back to the Spirit Wardens.</p>
+        <p>We would leave the matter there were it not for the children. Across the rail districts, they have taken up a game &mdash; they call it, simply, &ldquo;The Fifth Line.&rdquo; One child begins walking and chanting &mdash; <em>Fifth Line! Fifth Line!</em> &mdash; and others join one by one, a laughing procession winding through alleys and yards. Then, without warning, the line dissolves. They run, spin, and fling themselves at the pavement, skidding to a stop &mdash; scattered, as passengers once were scattered. They get up and do it again. No one knows where the game began.</p>
+        <p>Do you know what your children are playing? Do you know what they are calling?</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
