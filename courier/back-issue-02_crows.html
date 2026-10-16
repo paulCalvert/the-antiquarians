@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Doskvol Courier — Archive No. 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #d0c8b8;
+      font-family: 'IM Fell English', Georgia, serif;
+      color: #1a1008;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 14in;
+      margin: 0.25in auto;
+      background: #f5edd8;
+      padding: 0.28in 0.42in 0.35in 0.42in;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+      position: relative;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      text-align: center;
+      border-top: 3px double #1a1008;
+      border-bottom: 3px double #1a1008;
+      padding: 0.05in 0;
+      margin-bottom: 0.04in;
+    }
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 8pt;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.04in;
+      font-style: italic;
+    }
+    .masthead-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 52pt;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .masthead-sub {
+      font-size: 8.5pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 0.02in;
+      font-style: italic;
+    }
+
+    /* ── SECTION RULES ── */
+    .rule { border: none; border-top: 1px solid #1a1008; margin: 0.04in 0; }
+    .rule-thick { border: none; border-top: 2px solid #1a1008; margin: 0.05in 0; }
+    .rule-double { border: none; border-top: 3px double #1a1008; margin: 0.05in 0; }
+
+    /* ── HEADLINES ── */
+    .main-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 44pt;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0.05in 0 0.03in 0;
+    }
+    .main-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 10pt;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+    .secondary-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 17pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.02in;
+    }
+    .secondary-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9pt;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+
+    /* ── IMAGE PLACEHOLDERS (swap for <img> with the same sizing) ── */
+    .img-placeholder {
+      width: 100%;
+      border: 1.5px dashed #6b5a44;
+      background: repeating-linear-gradient(45deg, #e6dcc3, #e6dcc3 8px, #ded3b8 8px, #ded3b8 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.15in;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 8pt;
+      font-style: italic;
+      color: #4a3c2a;
+      line-height: 1.4;
+      margin-bottom: 0.03in;
+    }
+    .img-placeholder strong { display: block; font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.04in; }
+    .lead-image-block {
+      width: 100%;
+      height: 3.4in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border-top: 1px solid #1a1008;
+      border-bottom: 1px solid #1a1008;
+    }
+    .lead-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 8%;  /* keeps the rooftop Warden in frame */
+      display: block;
+    }
+    .side-image-block {
+      width: 100%;
+      height: 3.3in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border: 1px solid #1a1008;
+    }
+    .side-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;  /* keeps the crows and broken crown in frame */
+      display: block;
+    }
+
+    /* ── TWO-COLUMN MAIN STORY TEXT ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 0.2in;
+      margin-bottom: 0.05in;
+    }
+    .two-col-left {
+      border-right: 1px solid #1a1008;
+      padding-right: 0.18in;
+    }
+
+    /* ── BODY TEXT ── */
+    p {
+      font-size: 9pt;
+      line-height: 1.45;
+      text-align: justify;
+      hyphens: auto;
+      margin-bottom: 0.05in;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* Drop cap */
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 34pt;
+      font-weight: 700;
+      float: left;
+      line-height: 0.78;
+      margin: 0.03in 0.05in 0 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-top: 2px solid #1a1008;
+      border-bottom: 2px solid #1a1008;
+      padding: 0.05in 0.05in;
+      margin: 0.06in 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9.5pt;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    /* ── CAPTION ── */
+    .caption {
+      font-size: 7pt;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.02in;
+      line-height: 1.3;
+      margin-bottom: 0.06in;
+    }
+
+    /* ── SECONDARY STORY (image on the RIGHT this issue) ── */
+    .secondary-story {
+      display: grid;
+      grid-template-columns: 1fr 2.4in;
+      gap: 0 0.16in;
+      padding-top: 0.05in;
+    }
+    .secondary-col-text {
+      padding-right: 0.14in;
+      border-right: 1px solid #1a1008;
+    }
+
+    /* ── COLUMN BYLINE ── */
+    .byline {
+      font-size: 7.5pt;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 0.04in;
+      display: block;
+    }
+
+    .editorial-head {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 7pt;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── PRINT STYLES ── */
+    @media print {
+      body { background: none; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        padding: 0.25in 0.38in;
+      }
+      @page { size: 8.5in 14in; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <style>
+    /* Issue 2 variation: side-story image on the LEFT */
+    .secondary-story.img-left { grid-template-columns: 2.4in 1fr; }
+    .secondary-story.img-left .secondary-col-img { padding-right: 0.14in; border-right: 1px solid #1a1008; }
+    .secondary-story.img-left .secondary-col-text { padding-right: 0; border-right: none; }
+    .verse {
+      font-style: italic;
+      text-align: center;
+      font-size: 9pt;
+      line-height: 1.45;
+      margin: 0.05in 0 0.07in 0;
+      text-align-last: center;
+    }
+  </style>
+  <div class="page">
+
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <div class="masthead-top">
+        <span>Vol. XLV &nbsp;&bull;&nbsp; No. 34</span>
+        <span>25th Frostmonth</span>
+        <span>One Copper Bit</span>
+      </div>
+      <div class="masthead-name">The Doskvol Courier</div>
+      <div class="masthead-sub">All the News from Doskvol to the Deathlands</div>
+    </div>
+
+    <!-- MAIN HEADLINE -->
+    <div class="main-headline">Crow&rsquo;s Foot Tavern Erased!</div>
+    <div class="main-deck">Dozens Feared Dead at the Tarred Feather &mdash; No Fire, No Blast, Only Dust &mdash; Spirit Warden Investigator: &ldquo;Some Things Do Not Line Up&rdquo;</div>
+    <hr class="rule-thick">
+
+    <!-- FULL-WIDTH LEAD IMAGE -->
+    <div class="lead-image-block">
+      <img src="img/S02_crowsbar.png" alt="Spirit Wardens hold back a crowd at the dust-choked door of the Tarred Feather, Crow&rsquo;s Foot">
+    </div>
+    <p class="caption"><em>What remains of the Tarred Feather, Crow&rsquo;s Foot, on the morning after. The walls stand. Nothing within them does.</em></p>
+
+    <!-- TWO-COLUMN TEXT -->
+    <div class="two-col">
+
+      <!-- LEFT COLUMN -->
+      <div class="two-col-left">
+        <span class="byline">By Mirela Holt, Our Silkshore Correspondent, Reporting from Crow&rsquo;s Foot</span>
+        <p class="drop-cap">The Tarred Feather was full on the night of the 22nd. It was one of the open evenings its proprietors hold for the neighborhood &mdash; cheap ale, loud company, and work for those who come asking. By the second bell, the house was dark. By dawn, it was empty in a way no building in this city has been emptied in living memory.</p>
+        <p>There was no fire. Neighbors heard no blast. What they describe instead is a silence &mdash; the music and the shouting stopping all at once, &ldquo;like a hand over a mouth,&rdquo; said a woman who lives across the lane &mdash; followed by a dry wind that came out of the windows and doors and rattled the shutters of the street. When the first of the bolder neighbors went to look, they found the lamps out and the rooms full of a fine grey dust, drifted ankle-deep against the walls.</p>
+        <p>Of the patrons and staff, there is no count. The Bluecoats will say only that &ldquo;a number&rdquo; are dead or missing; the neighborhood says dozens. No bodies have been carried out that anyone can name. Several witnesses describe the dust as marked all over with handprints &mdash; on the bar, on the walls, on the insides of the windows &mdash; though every soul who might have made them is gone.</p>
+        <p>One detail, offered by two separate regulars who left early: a handful of strangers had been in the house that evening, unknown to the usual crowd, and were gone well before the silence fell.</p>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="two-col-right">
+        <div class="pull-quote" style="margin-top:0;">&ldquo;We have our suspicions of who it was. But some things do not line up with their normal&hellip; behaviors.&rdquo;</div>
+        <p>The Spirit Wardens sealed the street before noon. This paper was able to speak briefly with Wren, an investigator attached to the Wardens, at the cordon. Asked whether the Wardens knew who or what was responsible, she was unusually frank. &ldquo;We have our suspicions of who it was,&rdquo; she said. &ldquo;But some things do not line up with their normal&hellip; behaviors.&rdquo; She would not say whose behaviors she meant.</p>
+        <p>Your correspondent then asked whether the Wardens&rsquo; presence in Crow&rsquo;s Foot had anything to do with their unexplained attendance at a Silkshore pipe-house only weeks ago &mdash; reported in these pages &mdash; and the stripped body of the man found there. &ldquo;No comment,&rdquo; said Wren, and the cordon closed.</p>
+        <p>This paper will not pretend to know what it does not. But we note the following. In Silkshore, a scuffle in the night, a dead man&rsquo;s clothes gone, and the Wardens arriving in force. In Crow&rsquo;s Foot, a house known to do business with the district&rsquo;s rougher trades, strangers who left early, and the Wardens again. Two incidents. The same uninvited guests. If the parties to the Silkshore bungle and the trouble at the Tarred Feather are not one and the same, they keep remarkably similar company.</p>
+        <hr class="rule" style="margin: 0.09in 0;">
+        <p class="editorial-head">A Note on Things That Do Not Line Up</p>
+        <p>An officer of the Spirit Wardens has told this paper, on the record, that something in this city has behaved out of character, and that the Wardens believe they know what it is. The families of Crow&rsquo;s Foot are entitled to the rest of that sentence.</p>
+        <p>We will keep asking.</p>
+      </div>
+    </div>
+
+    <hr class="rule-double">
+
+    <!-- SECONDARY STORY (image on the LEFT this issue) -->
+    <div class="secondary-story img-left">
+
+      <!-- IMAGE COLUMN -->
+      <div class="secondary-col-img">
+        <div class="side-image-block">
+          <img src="img/S02_hands.png" alt="A child with a candle at a tenement window, the outside of the glass covered in dusty handprints">
+        </div>
+        <p class="caption"><em>&ldquo;Hands in the dust.&rdquo; An old warning, still told in the Docks and Crow&rsquo;s Foot.</em></p>
+      </div>
+
+      <!-- TEXT COLUMN -->
+      <div class="secondary-col-text">
+        <div class="secondary-headline">Hands in the Dust</div>
+        <div class="secondary-deck">An Old Nursery Warning Resurfaces in Crow&rsquo;s Foot &mdash; Our Correspondent Asks Where It Came From</div>
+        <span class="byline">By Ambrose Kettlewell, Our Correspondent for Civic Curiosities</span>
+        <p class="drop-cap">Since the Tarred Feather, the grandmothers of Crow&rsquo;s Foot have been saying an old rhyme again. Most of them learned it as children. None of them can say who taught it first.</p>
+        <p class="verse">Hands in the dust and dust on the door,<br>Don&rsquo;t ask her in unless you name what for.<br>Ask her in idle and leave her no due,<br>She&rsquo;ll make her own bargain &mdash; and the bargain is you.</p>
+        <p>The custom that goes with it is older still: when a knock comes at night, you do not say &ldquo;come in.&rdquo; You say &ldquo;what for?&rdquo; &mdash; and you wait for an answer.</p>
+        <p>Who &ldquo;she&rdquo; is, the rhyme does not say. This correspondent asked a dozen households. Most laughed. Three shut the door.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

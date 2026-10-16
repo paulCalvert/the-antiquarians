@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Doskvol Courier — Archive No. 3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #d0c8b8;
+      font-family: 'IM Fell English', Georgia, serif;
+      color: #1a1008;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 14in;
+      margin: 0.25in auto;
+      background: #f5edd8;
+      padding: 0.28in 0.42in 0.35in 0.42in;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+      position: relative;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      text-align: center;
+      border-top: 3px double #1a1008;
+      border-bottom: 3px double #1a1008;
+      padding: 0.05in 0;
+      margin-bottom: 0.04in;
+    }
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 8pt;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.04in;
+      font-style: italic;
+    }
+    .masthead-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 52pt;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .masthead-sub {
+      font-size: 8.5pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 0.02in;
+      font-style: italic;
+    }
+
+    /* ── SECTION RULES ── */
+    .rule { border: none; border-top: 1px solid #1a1008; margin: 0.04in 0; }
+    .rule-thick { border: none; border-top: 2px solid #1a1008; margin: 0.05in 0; }
+    .rule-double { border: none; border-top: 3px double #1a1008; margin: 0.05in 0; }
+
+    /* ── HEADLINES ── */
+    .main-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 44pt;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0.05in 0 0.03in 0;
+    }
+    .main-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 10pt;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+    .secondary-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 17pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.02in;
+    }
+    .secondary-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9pt;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+
+    /* ── IMAGE PLACEHOLDERS (swap for <img> with the same sizing) ── */
+    .img-placeholder {
+      width: 100%;
+      border: 1.5px dashed #6b5a44;
+      background: repeating-linear-gradient(45deg, #e6dcc3, #e6dcc3 8px, #ded3b8 8px, #ded3b8 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.15in;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 8pt;
+      font-style: italic;
+      color: #4a3c2a;
+      line-height: 1.4;
+      margin-bottom: 0.03in;
+    }
+    .img-placeholder strong { display: block; font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.04in; }
+    .lead-image-block {
+      width: 100%;
+      height: 3.4in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border-top: 1px solid #1a1008;
+      border-bottom: 1px solid #1a1008;
+    }
+    .lead-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+    .side-image-block {
+      width: 100%;
+      height: 3.3in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border: 1px solid #1a1008;
+    }
+    .side-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+
+    /* ── TWO-COLUMN MAIN STORY TEXT ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 0.2in;
+      margin-bottom: 0.05in;
+    }
+    .two-col-left {
+      border-right: 1px solid #1a1008;
+      padding-right: 0.18in;
+    }
+
+    /* ── BODY TEXT ── */
+    p {
+      font-size: 9pt;
+      line-height: 1.45;
+      text-align: justify;
+      hyphens: auto;
+      margin-bottom: 0.05in;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* Drop cap */
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 34pt;
+      font-weight: 700;
+      float: left;
+      line-height: 0.78;
+      margin: 0.03in 0.05in 0 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-top: 2px solid #1a1008;
+      border-bottom: 2px solid #1a1008;
+      padding: 0.05in 0.05in;
+      margin: 0.06in 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9.5pt;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    /* ── CAPTION ── */
+    .caption {
+      font-size: 7pt;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.02in;
+      line-height: 1.3;
+      margin-bottom: 0.06in;
+    }
+
+    /* ── SECONDARY STORY (image on the RIGHT this issue) ── */
+    .secondary-story {
+      display: grid;
+      grid-template-columns: 1fr 2.4in;
+      gap: 0 0.16in;
+      padding-top: 0.05in;
+    }
+    .secondary-col-text {
+      padding-right: 0.14in;
+      border-right: 1px solid #1a1008;
+    }
+
+    /* ── COLUMN BYLINE ── */
+    .byline {
+      font-size: 7.5pt;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 0.04in;
+      display: block;
+    }
+
+    .editorial-head {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 7pt;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Issue 3: the seal is square, so fit it whole instead of cropping, and blend its cream into the page */
+    .seal-block { height: 2.4in; border: none; }
+    .seal-block img { object-fit: contain; mix-blend-mode: multiply; }
+
+    /* Issue 3: the correction notice */
+    .notice-foot {
+      font-size: 7.5pt;
+      font-style: italic;
+      text-align: right;
+      margin-top: 0.06in;
+    }
+
+    /* ── PRINT STYLES ── */
+    @media print {
+      body { background: none; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        padding: 0.25in 0.38in;
+      }
+      @page { size: 8.5in 14in; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <div class="masthead-top">
+        <span>Vol. XLV &nbsp;&bull;&nbsp; No. 36</span>
+        <span>29th Frostmonth</span>
+        <span>One Copper Bit</span>
+      </div>
+      <div class="masthead-name">The Doskvol Courier</div>
+      <div class="masthead-sub">All the News from Doskvol to the Deathlands</div>
+    </div>
+
+    <!-- MAIN HEADLINE -->
+    <div class="main-headline">Is <em>This</em> the Emperor?</div>
+    <div class="main-deck">Bluecoats Rush to Escort Mystery Carriage Through Brightstone &mdash; Hundreds Turn Out in Impromptu Parade &mdash; Passenger Revealed as Gentleman &ldquo;On Private Business&rdquo;</div>
+    <hr class="rule-thick">
+
+    <!-- FULL-WIDTH LEAD IMAGE -->
+    <div class="lead-image-block">
+      <img src="img/S03_parade.png" alt="Bluecoats escort a curtained carriage through a cheering Brightstone crowd while a mortified gentleman peers out">
+    </div>
+    <p class="caption"><em>Brightstone, the evening of the 27th, as sketched by our artist. His Majesty is not pictured.</em></p>
+
+    <!-- TWO-COLUMN TEXT -->
+    <div class="two-col">
+
+      <!-- LEFT COLUMN -->
+      <div class="two-col-left">
+        <span class="byline">By Lucien Varnham, Our Correspondent for Society and the Brightstone Houses</span>
+        <p class="drop-cap">For the better part of an hour on the evening of the 27th, the Immortal Emperor rode through Brightstone in a black carriage with the curtains drawn. Several hundred citizens believed so, at any rate, and so, it appears, did the Bluecoats.</p>
+        <p>The city has spoken of little else this week. Nobody can say where the rumor started, and its versions do not agree: His Majesty arrives by sealed ship; he is already here, lodging in plain clothes; he has come to inspect the lightning barriers, or to settle accounts. One version, told only in Brightstone and only in lowered voices, holds that the visit concerns <em>a certain old and very private house</em> with which His Majesty is said to have business. Asked which house, the teller only smiled.</p>
+        <p>So when an unmarked carriage in black lacquer turned onto the boulevard near the eighth bell, curtains shut tight, a Bluecoat sergeant took one look and ordered his men to form up around it. Other patrols, seeing the first, fell in behind. A crowd gathered to see what the Bluecoats were guarding, and then followed it. Somebody produced a drum. By the time the carriage reached the upper boulevard, it was a parade.</p>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="two-col-right">
+        <div class="pull-quote" style="margin-top:0;">&ldquo;I kept telling them. Nobody asked me.&rdquo;<br><span style="font-weight:400; font-size:8pt;">&mdash; the coachman</span></div>
+        <p>The carriage stopped at a modest townhouse. The door opened. Out stepped not His Majesty but a gentleman of Brightstone known to this correspondent, calling on a lady who is not his wife. He took in the crowd, the drum, and the sergeant at full salute, went the color of a boiled crab, and got back in. This paper will withhold his name. We cannot speak for his wife. &ldquo;I kept telling them,&rdquo; said his coachman. &ldquo;Nobody asked me.&rdquo;</p>
+        <p>The parade had dispersed within the hour. The facts remain few: the harbor office has registered no Imperial vessel, the Lord Governor&rsquo;s office &ldquo;has nothing to announce at this time,&rdquo; and the Spirit Wardens, who answer to the Emperor alone, are &ldquo;unaware of any such visit.&rdquo; The Bluecoats, meanwhile, remain on the boulevards in fresh coats. A Crow&rsquo;s Foot shopkeeper, asked whether the street felt safer since the Tarred Feather, laughed. &ldquo;Two weeks ago they were on every corner here, asking questions. Now you can&rsquo;t find one.&rdquo;</p>
+        <hr class="rule" style="margin: 0.09in 0;">
+        <p class="editorial-head">A Note on Distinguished Visitors</p>
+        <p>The Emperor has not set foot in Doskvol in living memory. If His Majesty is coming, we hope someone has told the Bluecoats where to stand. If he is not, then somewhere in this city a single sentence, spoken once and in passing, has done more work this week than the entire watch.</p>
+        <p>We would very much like to know whose sentence it was.</p>
+      </div>
+    </div>
+
+    <hr class="rule-double">
+
+    <!-- SECONDARY STORY (image on the RIGHT this issue) -->
+    <div class="secondary-story">
+
+      <!-- TEXT COLUMN -->
+      <div class="secondary-col-text">
+        <div class="secondary-headline">A Correction</div>
+        <div class="secondary-deck">Regarding Our Report from Crow&rsquo;s Foot in No. 34</div>
+        <span class="byline">From the Editors</span>
+        <p class="drop-cap">In No. 34 of this paper, under the headline &ldquo;Crow&rsquo;s Foot Tavern Erased!&rdquo;, the Courier printed remarks attributed to an officer of the Spirit Wardens at the cordon of the Tarred Feather.</p>
+        <p>The Courier has since been informed by the office of the Wardens that the officer concerned was not authorized to speak, that the remarks did not reflect the Wardens&rsquo; findings, and that they should not have been printed. The Courier withdraws them in full, and apologizes to the Wardens and to the officer.</p>
+        <p>The Courier further withdraws the speculation, printed in the same article, connecting the matter at the Tarred Feather to events in Silkshore.</p>
+        <p>We have been asked to assure our readers that the matter is well in hand. There is no cause for alarm. Everything is fine.</p>
+        <p class="notice-foot">This notice is printed at the request of the Spirit Wardens.</p>
+      </div>
+
+      <!-- IMAGE COLUMN -->
+      <div class="secondary-col-img">
+        <div class="side-image-block seal-block">
+          <img src="img/S03_wardenseal.png" alt="The seal of the Spirit Wardens: a beaked mask within a lettered double ring">
+        </div>
+        <p class="caption"><em>The seal of the Spirit Wardens, as it appeared on the letter received by this office.</em></p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
