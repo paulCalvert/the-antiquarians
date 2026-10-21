@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Doskvol Courier — Archive No. 7</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #d0c8b8;
+      font-family: 'IM Fell English', Georgia, serif;
+      color: #1a1008;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 14in;
+      margin: 0.25in auto;
+      background: #f5edd8;
+      padding: 0.28in 0.42in 0.35in 0.42in;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+      position: relative;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      text-align: center;
+      border-top: 3px double #1a1008;
+      border-bottom: 3px double #1a1008;
+      padding: 0.05in 0;
+      margin-bottom: 0.04in;
+    }
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 8pt;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.04in;
+      font-style: italic;
+    }
+    .masthead-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 52pt;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .masthead-sub {
+      font-size: 8.5pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 0.02in;
+      font-style: italic;
+    }
+
+    /* ── SECTION RULES ── */
+    .rule { border: none; border-top: 1px solid #1a1008; margin: 0.04in 0; }
+    .rule-thick { border: none; border-top: 2px solid #1a1008; margin: 0.05in 0; }
+    .rule-double { border: none; border-top: 3px double #1a1008; margin: 0.05in 0; }
+
+    /* ── HEADLINES ── */
+    .main-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 44pt;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0.05in 0 0.03in 0;
+    }
+    .main-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 10pt;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+    .secondary-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 17pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.02in;
+    }
+    .secondary-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9pt;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+
+    /* ── IMAGE PLACEHOLDERS (swap for <img> with the same sizing) ── */
+    .img-placeholder {
+      width: 100%;
+      border: 1.5px dashed #6b5a44;
+      background: repeating-linear-gradient(45deg, #e6dcc3, #e6dcc3 8px, #ded3b8 8px, #ded3b8 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.15in;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 8pt;
+      font-style: italic;
+      color: #4a3c2a;
+      line-height: 1.4;
+      margin-bottom: 0.03in;
+    }
+    .img-placeholder strong { display: block; font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.04in; }
+    .lead-image-block {
+      width: 100%;
+      height: 3.4in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border-top: 1px solid #1a1008;
+      border-bottom: 1px solid #1a1008;
+    }
+    .lead-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+    .side-image-block {
+      width: 100%;
+      height: 3.3in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border: 1px solid #1a1008;
+    }
+    .side-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+
+    /* ── TWO-COLUMN MAIN STORY TEXT ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 0.2in;
+      margin-bottom: 0.05in;
+    }
+    .two-col-left {
+      border-right: 1px solid #1a1008;
+      padding-right: 0.18in;
+    }
+
+    /* ── BODY TEXT ── */
+    p {
+      font-size: 9pt;
+      line-height: 1.45;
+      text-align: justify;
+      hyphens: auto;
+      margin-bottom: 0.05in;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* Drop cap */
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 34pt;
+      font-weight: 700;
+      float: left;
+      line-height: 0.78;
+      margin: 0.03in 0.05in 0 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-top: 2px solid #1a1008;
+      border-bottom: 2px solid #1a1008;
+      padding: 0.05in 0.05in;
+      margin: 0.06in 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9.5pt;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    /* ── CAPTION ── */
+    .caption {
+      font-size: 7pt;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.02in;
+      line-height: 1.3;
+      margin-bottom: 0.06in;
+    }
+
+    /* ── SECONDARY STORY (image on the RIGHT this issue) ── */
+    .secondary-story {
+      display: grid;
+      grid-template-columns: 1fr 2.4in;
+      gap: 0 0.16in;
+      padding-top: 0.05in;
+    }
+    .secondary-col-text {
+      padding-right: 0.14in;
+      border-right: 1px solid #1a1008;
+    }
+
+    /* ── COLUMN BYLINE ── */
+    .byline {
+      font-size: 7.5pt;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 0.04in;
+      display: block;
+    }
+
+    .editorial-head {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 7pt;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── PRINT STYLES ── */
+    .secondary-story.img-left { grid-template-columns: 2.4in 1fr; }
+    .secondary-story.img-left .secondary-col-img { padding-right: 0.14in; border-right: 1px solid #1a1008; }
+    .secondary-story.img-left .secondary-col-text { padding-right: 0; border-right: none; }
+    .archive-mark {
+      position: absolute;
+      top: 0.06in;
+      right: 0.42in;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 7.5pt;
+      letter-spacing: 0.04em;
+      color: #8a7458;
+      transform: rotate(-1.5deg);
+    }
+    @media print {
+      body { background: none; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        padding: 0.25in 0.38in;
+      }
+      @page { size: 8.5in 14in; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="archive-mark">Archive No. 7 &middot; Session 7</div>
+
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <div class="masthead-top">
+        <span>Vol. XLV &nbsp;&bull;&nbsp; No. 44</span>
+        <span>19th Deadmonth</span>
+        <span>One Copper Bit</span>
+      </div>
+      <div class="masthead-name">The Doskvol Courier</div>
+      <div class="masthead-sub">All the News from Doskvol to the Deathlands</div>
+    </div>
+
+    <!-- MAIN HEADLINE -->
+    <div class="main-headline">Don&rsquo;t Whistle on Black Water</div>
+    <div class="main-deck">Four Dead at a Cold Corner Shrine &mdash; Worshippers Swallowed by a Puddle Four Inches Deep &mdash; An Old Dockside Warning Comes True &mdash; And the Wardens Have Roped It Off</div>
+    <hr class="rule-thick">
+
+    <!-- FULL-WIDTH LEAD IMAGE -->
+    <div class="lead-image-block">
+      <img src="img/S07_blackwater.png" alt="A candlelit underground shrine where a Bluecoat stands beside a sealed rope cordoning off a pool of still black water, as two worshippers keep their distance" style="object-position: center 55%;">
+    </div>
+    <p class="caption"><em>The black water in the Cold Corner shrine, as near as the Wardens would let us come.</em></p>
+
+    <!-- TWO-COLUMN TEXT -->
+    <div class="two-col">
+
+      <!-- LEFT COLUMN -->
+      <div class="two-col-left">
+        <span class="byline">By Bess Garrity, Our Correspondent on the Docks</span>
+        <p class="drop-cap">Every docker in Doskvol knows the saying: don&rsquo;t whistle on black water. I have heard it all my life and never once asked why. This week four people are dead in a shrine beneath the Cold Corner, and I have stopped laughing at it.</p>
+        <p>The shrine sits below the docks, down a stair most of the city has never noticed: a room of small altars, candle stubs and offerings, kept by working people who pray to things the Church does not name. By the time I got there the Spirit Wardens had been and gone. The far alcove is roped off, a Warden&rsquo;s seal hangs from the rope, and a Bluecoat stands beside it to see that nobody crosses. I was allowed as far as the rope and no further.</p>
+        <p>From there I could see it: a collapsed alcove, and on its floor a puddle of perfectly still black water, no more than three or four inches deep. It does not ripple. It does not take the lamplight quite as water should. I did not whistle.</p>
+        <p>What happened there I have pieced together from the regulars, who did not want to talk, and from a round of drinks, which helped. A party of strangers came down that afternoon, which is rare enough. One of them, a well-dressed gentleman, saw a beggar about to offer his last crust at the altar and pressed a gold coin into his hand instead. The beggar ran. The gentleman then laid two coins on the central shrine, as though he was not sure of the price. The very large man beside him only looked at him, and said, to no one in particular, &ldquo;Yeah, the water is weird today.&rdquo;</p>
+        <p>The strangers then stood around the black puddle for a long while. At last a smaller man among them lost patience, stepped in, and whistled. And he began to sink. Into four inches of water.</p>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="two-col-right">
+        <div class="pull-quote" style="margin-top:0;">&ldquo;Yeah, the water is weird today.&rdquo;<br><span style="font-weight:400; font-size:8pt;">&mdash; one of the strangers, overheard at the shrine</span></div>
+        <p>Down past his ankles, his knees, his waist, while a very large man hauled on his arm and could not shift him. Then a second stranger walked in beside him and whistled too. One by one they went under, every one of them. The gentleman went last. Two of the faithful, I am told, went in after them, whistling. Over the next hour four bodies came floating up out of that puddle: two men nobody knew, and then the two who had followed.</p>
+        <p>The saying is older than any of the men who taught it to me. Ask on the docks where it comes from and you will hear about the <em>Constance Grey</em>, a leviathan hunter that lay at anchor in the bay one calm night, years back. Her captain was a young lord, fonder of his lace than of his crew, who thought the dockers&rsquo; superstitions very amusing. The water that night was flat and black as glass. He stood at the rail and whistled a dance tune at it, to show the old hands what he thought of them. The bosun begged him to stop. He whistled louder.</p>
+        <p>In the morning the <em>Constance Grey</em> was gone. No wreck, no oil on the water, no bodies, not one plank. Where she had lain there was only still black water.</p>
+        <p>Tam Fennick, whom readers may remember from these pages, put it plainly. &ldquo;Whistling&rsquo;s calling. You whistle for a dog. You whistle for a cab. Why would you whistle on the water? You don&rsquo;t want what answers.&rdquo;</p>
+        <p>What lies beyond that water, nobody can tell me. One regular swears there is a temple down there, older than the city. Another says there is nothing at all, only <em>down</em>. The Wardens are not saying. And on the docks, the saying has not changed. Don&rsquo;t whistle on black water. And don&rsquo;t go in after those who do.</p>
+      </div>
+
+    </div>
+
+    <hr class="rule-double">
+
+    <!-- SECONDARY STORY (image on the RIGHT this issue) -->
+    <div class="secondary-story">
+
+      <!-- TEXT COLUMN -->
+      <div class="secondary-col-text">
+        <div class="secondary-headline">Beware the Brass-Heads!</div>
+        <div class="secondary-deck">A New Horror Stalks the Canal Lanes by Night, and Your Correspondent Has the Particulars</div>
+        <span class="byline">By Ambrose Kettlewell, Our Correspondent for Civic Curiosities</span>
+        <p class="drop-cap">Doskvol has its ghosts, its demons and its eels. It now, it seems, has the Brass-Heads. Last week no fewer than nine residents of the canal lanes reported tall, shambling things lurching through the dark: man-shaped, more or less, but with great swollen domes for heads, smooth and gleaming like a beetle&rsquo;s back.</p>
+        <p>Most heard them before they saw them: the heavy, wet <em>thwack</em> of a footfall, then a squelch, then another, as though something were walking in boots full of water. &ldquo;Like a man who&rsquo;s forgotten how knees work,&rdquo; said one lamplighter.</p>
+        <p>A cooper on his way home saw one from behind, standing under a lamp, and called out to it. It turned toward him slowly, its whole body at once. It had no face. Where a face should have been, he saw only his own, staring back at him out of the dome. &ldquo;It took my face,&rdquo; he told me, still pale two days later. &ldquo;It was wearing my face.&rdquo; He screamed and ran, and has checked his mirror several times an hour since.</p>
+        <p>Another witness watched one of the creatures seize its own great head in both hands and try, violently, to tear it off, wheezing and hissing all the while like a thing possessed. It did not succeed.</p>
+        <p>Theories abound: demons, the drowned come up for air, things from far beyond the Deathlands. But there is a great deal we do not know about the waters of Doskvol. Is <em>this</em> the newest horror to crawl up from their depths? One witness insists the larger creature carried a third, smaller one under its arm, limp, like its young. Another says it was also carrying a stool. A barkeep holds that there were two of them, and that they were arguing. I think this unlikely.</p>
+        <p>My advice: keep to lit streets, bar your door, and if you hear something squelching in the dark, do not stop to ask it what it wants.</p>
+      </div>
+
+      <!-- IMAGE COLUMN -->
+      <div class="secondary-col-img">
+        <div class="side-image-block">
+          <img src="img/S07_brasshead.png" alt="A rough charcoal sketch of a long-limbed, dripping monster with a faceless dome for a head and tentacle-like tendrils, with a small sketch of the dome reflecting a terrified human face">
+        </div>
+        <p class="caption"><em>The Brass-Head, as drawn by our artist from the accounts of witnesses.</em></p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

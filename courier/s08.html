@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Doskvol Courier — Archive No. 8</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #d0c8b8;
+      font-family: 'IM Fell English', Georgia, serif;
+      color: #1a1008;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 14in;
+      margin: 0.25in auto;
+      background: #f5edd8;
+      padding: 0.28in 0.42in 0.35in 0.42in;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+      position: relative;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      text-align: center;
+      border-top: 3px double #1a1008;
+      border-bottom: 3px double #1a1008;
+      padding: 0.05in 0;
+      margin-bottom: 0.04in;
+    }
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 8pt;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.04in;
+      font-style: italic;
+    }
+    .masthead-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 52pt;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .masthead-sub {
+      font-size: 8.5pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 0.02in;
+      font-style: italic;
+    }
+
+    /* ── SECTION RULES ── */
+    .rule { border: none; border-top: 1px solid #1a1008; margin: 0.04in 0; }
+    .rule-thick { border: none; border-top: 2px solid #1a1008; margin: 0.05in 0; }
+    .rule-double { border: none; border-top: 3px double #1a1008; margin: 0.05in 0; }
+
+    /* ── HEADLINES ── */
+    .main-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 44pt;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0.05in 0 0.03in 0;
+    }
+    .main-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 10pt;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+    .secondary-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 17pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.02in;
+    }
+    .secondary-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9pt;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+
+    /* ── IMAGE PLACEHOLDERS (swap for <img> with the same sizing) ── */
+    .img-placeholder {
+      width: 100%;
+      border: 1.5px dashed #6b5a44;
+      background: repeating-linear-gradient(45deg, #e6dcc3, #e6dcc3 8px, #ded3b8 8px, #ded3b8 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.15in;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 8pt;
+      font-style: italic;
+      color: #4a3c2a;
+      line-height: 1.4;
+      margin-bottom: 0.03in;
+    }
+    .img-placeholder strong { display: block; font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.04in; }
+    .lead-image-block {
+      width: 100%;
+      height: 3.4in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border-top: 1px solid #1a1008;
+      border-bottom: 1px solid #1a1008;
+    }
+    .lead-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+    .side-image-block {
+      width: 100%;
+      height: 3.3in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border: 1px solid #1a1008;
+    }
+    .side-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+
+    /* ── TWO-COLUMN MAIN STORY TEXT ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 0.2in;
+      margin-bottom: 0.05in;
+    }
+    .two-col-left {
+      border-right: 1px solid #1a1008;
+      padding-right: 0.18in;
+    }
+
+    /* ── BODY TEXT ── */
+    p {
+      font-size: 9pt;
+      line-height: 1.45;
+      text-align: justify;
+      hyphens: auto;
+      margin-bottom: 0.05in;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* Drop cap */
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 34pt;
+      font-weight: 700;
+      float: left;
+      line-height: 0.78;
+      margin: 0.03in 0.05in 0 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-top: 2px solid #1a1008;
+      border-bottom: 2px solid #1a1008;
+      padding: 0.05in 0.05in;
+      margin: 0.06in 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9.5pt;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    /* ── CAPTION ── */
+    .caption {
+      font-size: 7pt;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.02in;
+      line-height: 1.3;
+      margin-bottom: 0.06in;
+    }
+
+    /* ── SECONDARY STORY (image on the RIGHT this issue) ── */
+    .secondary-story {
+      display: grid;
+      grid-template-columns: 1fr 2.4in;
+      gap: 0 0.16in;
+      padding-top: 0.05in;
+    }
+    .secondary-col-text {
+      padding-right: 0.14in;
+      border-right: 1px solid #1a1008;
+    }
+
+    /* ── COLUMN BYLINE ── */
+    .byline {
+      font-size: 7.5pt;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 0.04in;
+      display: block;
+    }
+
+    .editorial-head {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 7pt;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── PRINT STYLES ── */
+    .secondary-story.img-left { grid-template-columns: 2.4in 1fr; }
+    .secondary-story.img-left .secondary-col-img { padding-right: 0.14in; border-right: 1px solid #1a1008; }
+    .secondary-story.img-left .secondary-col-text { padding-right: 0; border-right: none; }
+    .archive-mark {
+      position: absolute;
+      top: 0.06in;
+      right: 0.42in;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 7.5pt;
+      letter-spacing: 0.04em;
+      color: #8a7458;
+      transform: rotate(-1.5deg);
+    }
+    @media print {
+      body { background: none; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        padding: 0.25in 0.38in;
+      }
+      @page { size: 8.5in 14in; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="archive-mark">Archive No. 8 &middot; Session 8</div>
+
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <div class="masthead-top">
+        <span>Vol. XLV &nbsp;&bull;&nbsp; No. 46</span>
+        <span>27th Deadmonth</span>
+        <span>One Copper Bit</span>
+      </div>
+      <div class="masthead-name">The Doskvol Courier</div>
+      <div class="masthead-sub">All the News from Doskvol to the Deathlands</div>
+    </div>
+
+    <!-- MAIN HEADLINE -->
+    <div class="main-headline">Scurlock Returns to Society</div>
+    <div class="main-deck">A Faded House Raises a Glass at the Dalmorrians&rsquo; &mdash; Dalmorre and Quellin Announce an Engagement &mdash; Hard Words Behind a Closed Door &mdash; And an Eagle in the Servants&rsquo; Yard</div>
+    <hr class="rule-thick">
+
+    <!-- FULL-WIDTH LEAD IMAGE -->
+    <div class="lead-image-block">
+      <img src="img/S08_scurlock.png" alt="Seen from a balcony, Lord Scurlock stands alone in a ballroom doorway in a floor-length coat, raising a hand in greeting, as a young nobleman crosses the empty floor to welcome him and the crowd looks on" style="object-position: center 45%;">
+    </div>
+    <p class="caption"><em>Lord Scurlock arrives at the Dalmorrian house.</em></p>
+
+    <!-- TWO-COLUMN TEXT -->
+    <div class="two-col">
+
+      <!-- LEFT COLUMN -->
+      <div class="two-col-left">
+        <span class="byline">By Lucien Varnham, Our Correspondent for Society and the Brightstone Houses</span>
+        <p class="drop-cap">After the month this city has had, I confess I went to the Dalmorrians&rsquo; on Saturday hoping for nothing more than good wine and a little scandal. I got both.</p>
+        <p>Lord Schieven Dalmorrian opened his house to half of Brightstone to announce the engagement of his son, Master Alaric Dalmorrian, to Miss Anya Quellin. The Quellins arrived in force. A match between one of the city&rsquo;s oldest names and one of its fastest-rising will be the talk of every drawing room this season, and the old families are already counting generations on their fingers.</p>
+        <p>But the talk of the night was a guest nobody expected. Lord Scurlock, of a house most of us had long assumed closed, arrived dressed as though fashion had stopped to wait for him, and raised a glass from a bottle bearing an old Dalmorre crest to toast &ldquo;re-initiating good relations between House Scurlock and Dalmorre.&rdquo; The old families watched him the way a cat watches a stranger. The younger ones could not stop looking.</p>
+        <p>Elsewhere, Mr. Jared Dalmorrian held the household staff spellbound in the kitchen with stories and a bottle he had not been asked to open. And a very large guest, on the wrong end of a hand of cards, solved the problem by overturning the table, then soothed the gentlemen he had ruined by promising them an audience with Lord Schieven &ldquo;on Master Alaric&rsquo;s behalf.&rdquo; I look forward to that meeting.</p>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="two-col-right">
+        <div class="pull-quote" style="margin-top:0;">&ldquo;To re-initiating good relations between House Scurlock and Dalmorre.&rdquo;<br><span style="font-weight:400; font-size:8pt;">&mdash; Lord Scurlock, raising a glass</span></div>
+        <p>Not everything was warm. Early in the evening Lord Schieven withdrew to his office with his son and his brother, and the three came out some time later with the particular stiffness of men who have agreed to stop arguing until the guests are gone. Lord Schieven smiled for the rest of the night. Master Alaric did not. Mr. Jared seemed not to have noticed anything was wrong at all.</p>
+        <p>The servants, meanwhile, have a story of their own. Several swear that during the evening a great bird, an eagle, they insist, and no crow, came down out of the dark into the yard behind their quarters, looked them over, and went away again. Eagles are not common in Brightstone. Neither are servants who drink from the master&rsquo;s cellar, and I leave readers to weigh the evidence.</p>
+        <p>The next morning, the Spirit Wardens called. They were perfectly polite. They asked after anything unusual, walked the grounds, looked at the canal behind the house for rather a long time, and left having found nothing at all. Nobody at the house can tell me what they were looking for. The Wardens declined to comment.</p>
+        <p>All in all, a triumph. The couple handsome, the wine excellent, the gossip better, and House Scurlock is, it seems, back in society. Whatever comes of that, I intend to be invited.</p>
+      </div>
+
+    </div>
+
+    <hr class="rule-double">
+
+    <!-- SECONDARY STORY (image on the LEFT this issue) -->
+    <div class="secondary-story img-left">
+
+      <!-- IMAGE COLUMN -->
+      <div class="secondary-col-img">
+        <div class="side-image-block" style="display:flex; align-items:center; justify-content:center; border:none; box-shadow:none; background:none;">
+          <img src="img/S08_seal.png" alt="An unknown seal: a ring with four studs, and within it a closed book bound in chains, crossed by a quill" style="width:100%; height:auto; aspect-ratio:1; object-fit:contain; mix-blend-mode:multiply; -webkit-mask-image:radial-gradient(closest-side, #000 86%, transparent 100%); mask-image:radial-gradient(closest-side, #000 86%, transparent 100%);">
+        </div>
+        <p class="caption"><em>The seal in question. Have you seen it?</em></p>
+      </div>
+
+      <!-- TEXT COLUMN -->
+      <div class="secondary-col-text">
+        <div class="secondary-headline">Have You Seen This Seal?</div>
+        <div class="secondary-deck">House Valchek Will Pay for Old Papers Bearing an Unknown Mark</div>
+        <span class="byline">By Edwin Sallow, Our Charhollow Correspondent</span>
+        <p class="drop-cap">Readers may remember the Valchek warehouse that burned in Charhollow, and Miss Marla Vale, the House&rsquo;s Charter Steward, who has pursued its insurers without mercy ever since. She is pursuing something else now.</p>
+        <p>In the course of her inquiries, Miss Vale has come upon an old document bearing a seal she does not recognize: a ring, and within it a closed book bound in chains and crossed by a quill. House Valchek has kept the city&rsquo;s deeds and charters for centuries, and there is not much Miss Vale does not recognize. &ldquo;I have never seen it before,&rdquo; she told me. &ldquo;That alone is worth remarking on.&rdquo;</p>
+        <p>She asks that anyone holding papers that bear this seal, however old or damaged, bring them forward. Items that prove genuine will be paid for. Why it matters, she would not say, and I am not sure she knows. &ldquo;My House exists to preserve such things,&rdquo; she said. &ldquo;Somebody went to a great deal of trouble to seal these. I intend to find out why.&rdquo;</p>
+        <p>Inquiries to the Valchek offices, or to this paper.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
