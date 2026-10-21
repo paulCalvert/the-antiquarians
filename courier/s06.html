@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Doskvol Courier — Archive No. 6</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #d0c8b8;
+      font-family: 'IM Fell English', Georgia, serif;
+      color: #1a1008;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 14in;
+      margin: 0.25in auto;
+      background: #f5edd8;
+      padding: 0.28in 0.42in 0.35in 0.42in;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+      position: relative;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      text-align: center;
+      border-top: 3px double #1a1008;
+      border-bottom: 3px double #1a1008;
+      padding: 0.05in 0;
+      margin-bottom: 0.04in;
+    }
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 8pt;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.04in;
+      font-style: italic;
+    }
+    .masthead-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 52pt;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .masthead-sub {
+      font-size: 8.5pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 0.02in;
+      font-style: italic;
+    }
+
+    /* ── SECTION RULES ── */
+    .rule { border: none; border-top: 1px solid #1a1008; margin: 0.04in 0; }
+    .rule-thick { border: none; border-top: 2px solid #1a1008; margin: 0.05in 0; }
+    .rule-double { border: none; border-top: 3px double #1a1008; margin: 0.05in 0; }
+
+    /* ── HEADLINES ── */
+    .main-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 44pt;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0.05in 0 0.03in 0;
+    }
+    .main-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 10pt;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+    .secondary-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 17pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.02in;
+    }
+    .secondary-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9pt;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+
+    /* ── IMAGE PLACEHOLDERS (swap for <img> with the same sizing) ── */
+    .img-placeholder {
+      width: 100%;
+      border: 1.5px dashed #6b5a44;
+      background: repeating-linear-gradient(45deg, #e6dcc3, #e6dcc3 8px, #ded3b8 8px, #ded3b8 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.15in;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 8pt;
+      font-style: italic;
+      color: #4a3c2a;
+      line-height: 1.4;
+      margin-bottom: 0.03in;
+    }
+    .img-placeholder strong { display: block; font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.04in; }
+    .lead-image-block {
+      width: 100%;
+      height: 3.4in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border-top: 1px solid #1a1008;
+      border-bottom: 1px solid #1a1008;
+    }
+    .lead-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+    .side-image-block {
+      width: 100%;
+      height: 3.3in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border: 1px solid #1a1008;
+    }
+    .side-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+
+    /* ── TWO-COLUMN MAIN STORY TEXT ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 0.2in;
+      margin-bottom: 0.05in;
+    }
+    .two-col-left {
+      border-right: 1px solid #1a1008;
+      padding-right: 0.18in;
+    }
+
+    /* ── BODY TEXT ── */
+    p {
+      font-size: 9pt;
+      line-height: 1.45;
+      text-align: justify;
+      hyphens: auto;
+      margin-bottom: 0.05in;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* Drop cap */
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 34pt;
+      font-weight: 700;
+      float: left;
+      line-height: 0.78;
+      margin: 0.03in 0.05in 0 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-top: 2px solid #1a1008;
+      border-bottom: 2px solid #1a1008;
+      padding: 0.05in 0.05in;
+      margin: 0.06in 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9.5pt;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    /* ── CAPTION ── */
+    .caption {
+      font-size: 7pt;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.02in;
+      line-height: 1.3;
+      margin-bottom: 0.06in;
+    }
+
+    /* ── SECONDARY STORY (image on the RIGHT this issue) ── */
+    .secondary-story {
+      display: grid;
+      grid-template-columns: 1fr 2.4in;
+      gap: 0 0.16in;
+      padding-top: 0.05in;
+    }
+    .secondary-col-text {
+      padding-right: 0.14in;
+      border-right: 1px solid #1a1008;
+    }
+
+    /* ── COLUMN BYLINE ── */
+    .byline {
+      font-size: 7.5pt;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 0.04in;
+      display: block;
+    }
+
+    .editorial-head {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 7pt;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── PRINT STYLES ── */
+    .secondary-story.img-left { grid-template-columns: 2.4in 1fr; }
+    .secondary-story.img-left .secondary-col-img { padding-right: 0.14in; border-right: 1px solid #1a1008; }
+    .secondary-story.img-left .secondary-col-text { padding-right: 0; border-right: none; }
+    .archive-mark {
+      position: absolute;
+      top: 0.06in;
+      right: 0.42in;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 7.5pt;
+      letter-spacing: 0.04em;
+      color: #8a7458;
+      transform: rotate(-1.5deg);
+    }
+    @media print {
+      body { background: none; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        padding: 0.25in 0.38in;
+      }
+      @page { size: 8.5in 14in; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="archive-mark">Archive No. 6 &middot; Session 6</div>
+
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <div class="masthead-top">
+        <span>Vol. XLV &nbsp;&bull;&nbsp; No. 42</span>
+        <span>11th Deadmonth</span>
+        <span>One Copper Bit</span>
+      </div>
+      <div class="masthead-name">The Doskvol Courier</div>
+      <div class="masthead-sub">All the News from Doskvol to the Deathlands</div>
+    </div>
+
+    <!-- MAIN HEADLINE -->
+    <div class="main-headline">What Happened at 5:47?</div>
+    <div class="main-deck">A Young Lady Seized at a Brightstone Salon &mdash; A Man Clawing at the Paving Stones &mdash; Children Struck Silent in the Street &mdash; All in the Same Minute, and No One Can Say Why</div>
+    <hr class="rule-thick">
+
+    <!-- FULL-WIDTH LEAD IMAGE -->
+    <div class="lead-image-block">
+      <img src="img/S06_party.png" alt="A girl in a party dress pinned in the air against a drawing room wall, screaming with her hands over her ears, as a portrait falls and the guests and string quartet recoil in horror" style="object-position: center 15%;">
+    </div>
+    <p class="caption"><em>The Vellacott drawing room at 5:47, as recalled by those present.</em></p>
+
+    <!-- TWO-COLUMN TEXT -->
+    <div class="two-col">
+
+      <!-- LEFT COLUMN -->
+      <div class="two-col-left">
+        <span class="byline">By Lucien Varnham, Our Correspondent for Society and the Brightstone Houses</span>
+        <p class="drop-cap">I attend a great many parties, and I write about most of them. I expected to write about this one too: the Vellacotts&rsquo; autumn salon, the good crystal, the better gossip. I did not expect to write this.</p>
+        <p>The Vellacotts have a daughter, Miss Ottilie, fifteen years old and, as her mother is fond of telling guests, &ldquo;sensitive.&rdquo; She feels a storm before it breaks, and the household spirits are said to be quite fond of her. Lady Vellacott likes to bring her down to the drawing room and show her off. A little before six, she did.</p>
+        <p>At 5:47 by the mantel clock, Miss Ottilie began to scream. It was not a child&rsquo;s tantrum. It was a howl, high and terrible, with her hands clamped over her ears. &ldquo;Make it stop! It&rsquo;s going too fast! It&rsquo;s screaming, can&rsquo;t you hear it screaming? Make it <em>stop!</em>&rdquo; The string quartet stopped instead. Nobody else in the room heard a thing.</p>
+        <p>Her father went to carry her out. He never reached her. Before forty guests, the girl rose clear of the carpet, hung for a moment in the air, and was flung back against the wall as if by a hand none of us could see. The portrait above her came down with her.</p>
+        <p>The party was dismissed within the quarter hour. I am told Miss Ottilie is resting, bruised but otherwise unharmed, and the family asks for privacy, which I shall grant them from the end of this paragraph.</p>
+        <p>Had it been the only such report, I would have filed it as a sad society item. It was not. Over the days that followed, the Courier&rsquo;s correspondents brought in story after story from all over the city, and the clocks all agreed.</p>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="two-col-right">
+        <div class="pull-quote" style="margin-top:0;">&ldquo;It&rsquo;s going too fast! Can&rsquo;t you hear it screaming?&rdquo;<br><span style="font-weight:400; font-size:8pt;">&mdash; Miss Ottilie Vellacott, aged fifteen, at 5:47</span></div>
+        <p>In Coalridge, at the same minute, a laborer was found on his knees in the road, clawing at the paving stones until his fingers bled. &ldquo;It won&rsquo;t wait,&rdquo; he kept saying. &ldquo;I&rsquo;ll miss it. I have to get on. I <em>have</em> to get on.&rdquo; Get on what, he could not say. Neither could the Bluecoats who took him away.</p>
+        <p>In Charhollow, a crowd of children were out after hours playing the street game they call &ldquo;Fifth Line!&rdquo; At 5:47 they stopped. Not one at a time: all at once, mid-step and mid-shout. No laughing, no running. They stood in the road and stared, every one of them, at the same nothing in the distance. Their parents shook them and called their names and got nothing. Then, all together, the children blinked, said they were tired, and went inside.</p>
+        <p>The Courier also sought comment from the Dimmer Sisters. They sent a woman to meet me in a tavern. She was cold, in a way that had nothing to do with the weather, and when she spoke her voice seemed to come from much farther away than across the table. &ldquo;Something is off,&rdquo; she said. &ldquo;And given that we do not know what, that is concerning.&rdquo; She offered me witchbane and a ghost ward for my door. I politely declined. It was all rather unpleasant.</p>
+        <p>The Spirit Wardens declined to comment.</p>
+        <p>One thing more, and then I shall stop. While writing this I went to visit my mother, who is old and unwell, and who has for years rocked gently from side to side in her chair, as if keeping time to something. When I came in she was perfectly still. I asked her if anything was wrong. &ldquo;I no longer hear it,&rdquo; she said. Hear what, Mother? &ldquo;The click,&rdquo; she said. &ldquo;The clack. Click, clack. Click, clack.&rdquo; She said a few more things after that, none of which made any sense, and then she drifted off to sleep.</p>
+      </div>
+
+    </div>
+
+    <hr class="rule-double">
+
+    <!-- SECONDARY STORY (image on the LEFT this issue) -->
+    <div class="secondary-story img-left">
+
+      <!-- IMAGE COLUMN -->
+      <div class="secondary-col-img">
+        <div class="side-image-block">
+          <img src="img/S06_prophet.png" alt="A ragged street prophet on a crate holding up a handful of pebbles to a skeptical crowd beneath a gas lamp" style="object-position: center 20%;">
+        </div>
+        <p class="caption"><em>Prophecy, available by the bit.</em></p>
+      </div>
+
+      <!-- TEXT COLUMN -->
+      <div class="secondary-col-text">
+        <div class="secondary-headline">Everyone Saw It Coming</div>
+        <div class="secondary-deck">The City&rsquo;s Faithful Rush to Claim 5:47, and One Fashionable Society Has &ldquo;Something Big in the Works&rdquo;</div>
+        <span class="byline">By Mirela Holt, Our Silkshore Correspondent</span>
+        <p class="drop-cap">Nobody in Doskvol saw 5:47 coming. By the next morning, everybody had. The Brethren of the Third Bell posted notices claiming they had predicted it to the minute, though no one can find the prediction, and their pamphlet from last month has the world ending on the fourth. The Church of the Patient Tide says it was in their sermons all along, &ldquo;in a manner of speaking.&rdquo; A Crow&rsquo;s Foot man calling himself the Seventh Lamp has begun selling protective pebbles against the next one, at two bits apiece, three for five.</p>
+        <p>Not one of these prophecies, I note, was printed, posted or preached before the evening in question.</p>
+        <p>Then there is the Meridian Circle, a new society quite fashionable in Brightstone, whose membership is said to include some very old names. Its rooms are spotless, yet every member I passed on the stair had a fine grey dust on cuff and collar, like ash from a fire. The gloves of its spokeswoman, Miss Veleris Quill, were dusted the same. Did the Circle know what happened at 5:47? &ldquo;We cannot clarify at this time,&rdquo; Miss Quill said. &ldquo;But we have something very big in the works.&rdquo; At the door she pressed her card on me. It bears no name, only a small grey handprint.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

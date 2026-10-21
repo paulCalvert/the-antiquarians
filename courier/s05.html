@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Doskvol Courier — Archive No. 5</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #d0c8b8;
+      font-family: 'IM Fell English', Georgia, serif;
+      color: #1a1008;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 14in;
+      margin: 0.25in auto;
+      background: #f5edd8;
+      padding: 0.28in 0.42in 0.35in 0.42in;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+      position: relative;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      text-align: center;
+      border-top: 3px double #1a1008;
+      border-bottom: 3px double #1a1008;
+      padding: 0.05in 0;
+      margin-bottom: 0.04in;
+    }
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 8pt;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.04in;
+      font-style: italic;
+    }
+    .masthead-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 52pt;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .masthead-sub {
+      font-size: 8.5pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 0.02in;
+      font-style: italic;
+    }
+
+    /* ── SECTION RULES ── */
+    .rule { border: none; border-top: 1px solid #1a1008; margin: 0.04in 0; }
+    .rule-thick { border: none; border-top: 2px solid #1a1008; margin: 0.05in 0; }
+    .rule-double { border: none; border-top: 3px double #1a1008; margin: 0.05in 0; }
+
+    /* ── HEADLINES ── */
+    .main-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 44pt;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0.05in 0 0.03in 0;
+    }
+    .main-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 10pt;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+    .secondary-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 17pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.02in;
+    }
+    .secondary-deck {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9pt;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      line-height: 1.35;
+      margin-bottom: 0.04in;
+    }
+
+    /* ── IMAGE PLACEHOLDERS (swap for <img> with the same sizing) ── */
+    .img-placeholder {
+      width: 100%;
+      border: 1.5px dashed #6b5a44;
+      background: repeating-linear-gradient(45deg, #e6dcc3, #e6dcc3 8px, #ded3b8 8px, #ded3b8 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.15in;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 8pt;
+      font-style: italic;
+      color: #4a3c2a;
+      line-height: 1.4;
+      margin-bottom: 0.03in;
+    }
+    .img-placeholder strong { display: block; font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.04in; }
+    .lead-image-block {
+      width: 100%;
+      height: 3.4in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border-top: 1px solid #1a1008;
+      border-bottom: 1px solid #1a1008;
+    }
+    .lead-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+    .side-image-block {
+      width: 100%;
+      height: 3.3in;
+      overflow: hidden;
+      margin-bottom: 0.03in;
+      border: 1px solid #1a1008;
+    }
+    .side-image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+
+    /* ── TWO-COLUMN MAIN STORY TEXT ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 0.2in;
+      margin-bottom: 0.05in;
+    }
+    .two-col-left {
+      border-right: 1px solid #1a1008;
+      padding-right: 0.18in;
+    }
+
+    /* ── BODY TEXT ── */
+    p {
+      font-size: 9pt;
+      line-height: 1.45;
+      text-align: justify;
+      hyphens: auto;
+      margin-bottom: 0.05in;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* Drop cap */
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 34pt;
+      font-weight: 700;
+      float: left;
+      line-height: 0.78;
+      margin: 0.03in 0.05in 0 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-top: 2px solid #1a1008;
+      border-bottom: 2px solid #1a1008;
+      padding: 0.05in 0.05in;
+      margin: 0.06in 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 9.5pt;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    /* ── CAPTION ── */
+    .caption {
+      font-size: 7pt;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.02in;
+      line-height: 1.3;
+      margin-bottom: 0.06in;
+    }
+
+    /* ── SECONDARY STORY (image on the RIGHT this issue) ── */
+    .secondary-story {
+      display: grid;
+      grid-template-columns: 1fr 2.4in;
+      gap: 0 0.16in;
+      padding-top: 0.05in;
+    }
+    .secondary-col-text {
+      padding-right: 0.14in;
+      border-right: 1px solid #1a1008;
+    }
+
+    /* ── COLUMN BYLINE ── */
+    .byline {
+      font-size: 7.5pt;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 0.04in;
+      display: block;
+    }
+
+    .editorial-head {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 7pt;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── PRINT STYLES ── */
+    .archive-mark {
+      position: absolute;
+      top: 0.06in;
+      right: 0.42in;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 7.5pt;
+      letter-spacing: 0.04em;
+      color: #8a7458;
+      transform: rotate(-1.5deg);
+    }
+    @media print {
+      body { background: none; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        padding: 0.25in 0.38in;
+      }
+      @page { size: 8.5in 14in; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="archive-mark">Archive No. 5 &middot; Session 5</div>
+
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <div class="masthead-top">
+        <span>Vol. XLV &nbsp;&bull;&nbsp; No. 40</span>
+        <span>6th Deadmonth</span>
+        <span>One Copper Bit</span>
+      </div>
+      <div class="masthead-name">The Doskvol Courier</div>
+      <div class="masthead-sub">All the News from Doskvol to the Deathlands</div>
+    </div>
+
+    <!-- MAIN HEADLINE -->
+    <div class="main-headline">The City Beneath the City</div>
+    <div class="main-deck">Our Correspondent Rides the Under-Canals with the Gondoliers&rsquo; Most Elusive Pilot &mdash; Rails Over Black Water &mdash; A Sealed Platform &mdash; And a Very Warm Welcome</div>
+    <hr class="rule-thick">
+
+    <!-- FULL-WIDTH LEAD IMAGE -->
+    <div class="lead-image-block">
+      <img src="img/S05_undercity.png" alt="A boat in a ruined cavern beneath the city, the newspaperman standing at the bow with a lantern and Lady Crane hunched at the stern paddling with her long hands, an old rail line on trestles plunging into the black water" style="object-position: center 60%;">
+    </div>
+    <p class="caption"><em>The great cavern beneath the city, and the old Fifth Line where it meets the water, as sketched afterward by your correspondent, who could not hold a pencil at the time.</em></p>
+
+    <!-- TWO-COLUMN TEXT -->
+    <div class="two-col">
+
+      <!-- LEFT COLUMN -->
+      <div class="two-col-left">
+        <span class="byline">By Silas Penhallow, Our Rail District Correspondent</span>
+        <p class="drop-cap">I have spent the better part of my career asking after the old city, the one beneath the one we walk on, and the better part of it being told to stop. This week, for the price of a fare and a promise not to scream, I was shown it.</p>
+        <p>The instructions were not ones a sensible man would follow: wait alone at the old pier in Six Towers, after dark, with a lantern. I waited a long while. Then a hand appeared in the black mouth of a tunnel beneath the district, and beckoned. A correspondent goes where the story goes, so I stepped down into the canal.</p>
+        <p>My first impression of Lady Crane was not a favorable one. The hand came first, each finger as long as my whole hand, then a spindly arm, then the rest of her: nine feet of limb when she unfolds, like a heron that has learned to stand upright. She does not pole her boat so much as pull it, drawing herself along the tunnel walls hand over hand. I gripped the gunwale and said what prayers I could remember.</p>
+        <p>Then she spoke. &ldquo;Hello, dearie. Mind your elbows.&rdquo; For the rest of the night she was the warmest host I have met in thirty years of the trade.</p>
+        <p>To make conversation, I asked what it is the Gondoliers actually do. &ldquo;Why, help you get around the city, dearie.&rdquo; Is that all? She pulled us along a few more lengths before she answered. &ldquo;We help you move along. And we help others move on.&rdquo; I did not ask which others.</p>
+        <p>Some of the tunnels were barely wider than the boat, and I sat folded nearly double. I am not, I have discovered, a man who does well in small spaces. Her long arms reached past me, inches from my face, to haul us along by the ceiling, and at one point the brick pressed so close that a button sprang from my coat into the dark water. I did not ask her to go back for it.</p>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="two-col-right">
+        <div class="pull-quote" style="margin-top:0;">&ldquo;We help you move along. And we help others move on.&rdquo;<br><span style="font-weight:400; font-size:8pt;">&mdash; Lady Crane, on the work of the Gondoliers</span></div>
+        <p>Once we passed through a low chamber where every ledge and wall and old iron ring was caked thick with grey dust. Lady Crane&rsquo;s manner changed at once. She slowed, and hushed, and her eyes never stopped moving. &ldquo;Don&rsquo;t touch anything, dearie,&rdquo; she said quietly. &ldquo;Don&rsquo;t disturb it.&rdquo; She did not smile again until we were well through.</p>
+        <p>Then the walls fell away. We came out into a cavern larger than any warehouse in Doskvol, the underside of the city hanging overhead: footings, foundations, old arches holding up streets I have walked a thousand times. I could not have said which streets.</p>
+        <p>Here, with nothing to pull on, Lady Crane spread her fingers wide and paddled with her hands like oars. I did not remark on it, nor on the dark shapes moving in the water, nor on the small ghost-lights at the edge of the lamp that were never there when I looked again. I was raised to be polite.</p>
+        <p>I did ask about the rails: a line of track coming out of a tunnel across the cavern, sloping down, and vanishing beneath the black water. &ldquo;The Fifth Line,&rdquo; she said. &ldquo;What&rsquo;s left of her.&rdquo; Every child in Doskvol knows that name from the rhyme, and from then on I forgot to be frightened.</p>
+        <p>Does the train still run? &ldquo;She crashed. Decades ago.&rdquo; So it runs no longer? Lady Crane regarded me for a long moment. &ldquo;I didn&rsquo;t say that.&rdquo;</p>
+        <p>Most of the old ways in were sealed long ago, she said, the Fifth Line&rsquo;s platform among them. &ldquo;But there&rsquo;s plenty of ways below, if you know where to look, and you don&rsquo;t mind unfavorable company.&rdquo; I told her I found her company very favorable. Lady Crane gave me a warm smile, and I am quite sure a genuine one.</p>
+        <p>Could I send readers her way? She laughed. &ldquo;You can try, dearie. But I choose my passengers.&rdquo; Then she set me down at the old pier in Six Towers and slipped back into the canals beneath the city.</p>
+      </div>
+    </div>
+
+    <hr class="rule-double">
+
+    <!-- SECONDARY STORY (image on the RIGHT this issue) -->
+    <div class="secondary-story">
+
+      <!-- TEXT COLUMN -->
+      <div class="secondary-col-text">
+        <div class="secondary-headline">Paying the Sea</div>
+        <div class="secondary-deck">An Old Harbor Custom, and Why the Men Who Keep It Are Uneasy</div>
+        <span class="byline">By Bess Garrity, Our Correspondent on the Docks</span>
+        <p class="drop-cap">The dockers of Doskvol do not talk to the papers, unless the paper buys a round. Tam Fennick, forty years a docker, accepted the first glass on condition of the second, and the stories began.</p>
+        <p>&ldquo;You don&rsquo;t go out on the water without paying,&rdquo; he said. &ldquo;Rowing to the next pier, a bit of copper over the side. A long voyage, you pay proper before you cast off.&rdquo; On Tithesday, the first of every month, everyone pays, and the old hands say the old words: &ldquo;Coin drawn from the harbor&rsquo;s own trade, counted true and paid in full, every season, without fail.&rdquo; Paid to whom? &ldquo;The sea.&rdquo;</p>
+        <p>When a man is overdue, his family pays for him. On the north quay this week, a girl of six or seven dropped a wooden horse off the pier. Her father&rsquo;s boat is three days late. Several of the men took off their caps.</p>
+        <p>The water, the dockers say, &ldquo;gets weird.&rdquo; Last week it went flat as glass for an hour, &ldquo;like something underneath was holding its breath.&rdquo; Something underneath? &ldquo;The Thing Below,&rdquo; offered a younger man. Mr. Fennick turned on him. &ldquo;Don&rsquo;t.&rdquo; What is the Thing Below? &ldquo;Don&rsquo;t ask that.&rdquo; The round, it seemed, was over.</p>
+      </div>
+
+      <!-- IMAGE COLUMN -->
+      <div class="secondary-col-img">
+        <div class="side-image-block">
+          <img src="img/S05_tithe.png" alt="A little girl at the end of a pier at night letting a wooden toy horse fall into glass-still water while three dockers take off their caps">
+        </div>
+        <p class="caption"><em>The north quay. A father three days overdue.</em></p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
